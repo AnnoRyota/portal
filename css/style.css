@@ -1,0 +1,572 @@
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+font-family: 'Higashiosaka';
+src: url('../font/Higashiosaka-Regular.woff')  format('woff'),
+url('../font/Higashiosaka-Regular.woff2')  format('woff2'),
+url('../font/Higashiosaka-Regular.ttf')  format('truetype');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Righteous&display=swap');
+
+body {
+  width: 100%;
+  background-color: #fff;
+  color: #0f172a;
+  line-height: 1.5;
+  overflow-x: hidden;
+}
+
+.container {
+  background-color: #fff;
+  /* border-top-left-radius: 0.5rem; */
+  /* border-top-right-radius: 0.5rem; */
+  box-shadow: 0 0 15px rgba(100, 100, 100, .1);
+  height: auto;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+}
+
+.container.bgnone {
+  position: relative;
+  top: -144px;
+  border-radius: .5rem;
+  /* border-top-left-radius: 0.5rem; */
+  /* border-top-right-radius: 0.5rem; */
+  width: 95%!important;
+  height: auto;
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  box-shadow: none;
+}
+
+h2.title {
+  font-family: KPSans,Avenir Next,sans-serif;
+  border-bottom: 4px solid #00507F;
+  border-image: linear-gradient(to right, #00507F 0%, #FFF 100%);
+  border-image-slice: 1;
+  width: fit-content;
+  padding-bottom: 8px;
+  font-size: 6rem;
+  text-transform: uppercase;
+  font-weight: bolder;
+  line-height: 1;
+  margin: 0 auto 30px;
+}
+
+p {
+  font-weight: light;
+  letter-spacing: 1px;
+}
+
+.text p {
+  margin-bottom: 1.5rem;
+}
+
+img {
+  width: 100%;
+}
+
+a.active {
+  color: #0369a1;
+}
+
+a.active::before {
+  content: "";
+  border-left: 4px solid #0369a1!important;
+  margin-right: 5px;
+}
+
+.slow-moves {
+  transition: 0.3s;
+}
+
+.sidebar-inactive {
+  transform: translateX(-100%);
+}
+
+.tag {
+  display: flex;
+  gap: 8px;
+  text-align: center;
+  color: #fff;
+  font-size: .65rem;
+  margin: 8px 0;
+  white-space: nowrap;
+}
+
+.tag p {
+  padding: 4px 8px;
+}
+
+/*  */
+
+.input {
+  border: none;
+  outline: none;
+  border-radius: 32px;
+  padding: 1em;
+  background-color: #FAFAFA;
+  box-shadow: inset 2px 5px 10px rgba(100,100,100,0.3);
+  transition: 300ms ease-in-out;
+}
+
+.input:focus {
+  background-color: white;
+  transform: scale(1.05);
+  box-shadow: 13px 13px 100px #969696,
+             -13px -13px 100px #ffffff;
+}
+
+.card {
+  background: #f5f5f5;
+  box-shadow:
+  -10px -10px 35px #ffffff,
+  10px 10px 35px #cccccc;
+
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* anime */
+
+.anime_wrap {
+  position: relative;
+  overflow: hidden;
+  background: #FAFAFA;
+}
+
+.anime_wrap::before,
+.anime_wrap::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.anime_wrap::before{
+    background: #00507F;
+    z-index: 3;
+    transition: 1s;
+}
+.anime_wrap::after{
+    background: #00507F;
+    z-index: 2;
+    transition: 1s;
+    transition-delay: .5s;
+}
+
+.anime_wrap.show::before,
+.anime_wrap.show::after {
+    transform: translateY(100%);
+}
+
+.anime_wrap video {
+  width: 70%;
+  margin: 0 auto;
+  padding: 100px 0;
+    opacity: 0;
+    transform: scale(.8);
+    transition: 1.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    transition-delay: .4s;
+}
+.anime_wrap.show video {
+    opacity: 1;
+    transform: scale(1);
+}
+/* .anime_wrap p {
+    color: #FFF;
+    opacity: 0;
+    transform: translateX(-40px);
+    transition: 1.2s;
+    transition-delay: .8s;
+    z-index: 1;
+    overflow: hidden;
+}
+.anime_wrap.show p{
+    opacity: 1;
+    transform: translateX(0);
+} */
+
+
+/* めインビジュアル */
+@import url("https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;1,500&display=swap");
+/*
+$purple: #8a15ff;
+$blue: #3800e7;
+$ltblue: #15e0ff;
+$magenta: #d000c5;
+#38bdf8
+
+// This is an example of animations & svgs... I completely understand that the amount of absolute positioning in this file is insane... ;) <3 */
+
+.mainvisual {
+  background: linear-gradient(#38bdf8,#00507F);
+  /* background: #fafafa; */
+  width: 100%;
+  height: 100vh;
+  font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300)));
+  /* font-family: "DM Mono", monospace; */
+  font-weight: 300;
+  overflow: hidden;
+}
+
+/* .mainvisual #video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 120%;
+  opacity: .25;
+} */
+
+.mainvisual h1 {
+  font-family: 'Higashiosaka';
+  font-size: 10rem;
+  margin: 0 auto;
+  width: fit-content;
+  line-height: 1.25;
+  color: #fff;
+  /* color: #0f172a; */
+  mix-blend-mode: soft-light;
+}
+
+header {
+  position: relative;
+  z-index: 99;
+}
+
+.main {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.main:before, .main:after {
+  content: "";
+  display: block;
+  position: absolute;
+  z-index: -3;
+}
+
+.main:before {
+  right: 0;
+  bottom: -19;
+  height: 22em;
+  width: 22em;
+  border-radius: 30em;
+  background: linear-gradient(#00507F, #38bdf8);
+  /* background: #0090E5; */
+  align-self: flex-end;
+  -webkit-animation: gradient-fade 8s ease-in-out 3s infinite alternate;
+          animation: gradient-fade 8s ease-in-out 3s infinite alternate;
+}
+
+.main:after {
+  top: 0;
+  left: 30;
+  height: 10em;
+  width: 10em;
+  border-radius: 10em;
+  background: linear-gradient(#38bdf8, #00507F);
+  /* background: linear-gradient(#FDE047, #fde047); */
+  /* background: #FDE047; */
+  -webkit-animation: gradient-fade-alt 6s ease-in-out 3s infinite alternate;
+          animation: gradient-fade-alt 6s ease-in-out 3s infinite alternate;
+}
+
+.main__text-wrapper {
+  position: relative;
+  padding: 2rem;
+}
+
+.main__text-wrapper:before, .main__text-wrapper:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+
+.main__text-wrapper:before {
+  z-index: -1;
+  top: -3em;
+  right: -3em;
+  width: 10em;
+  height: 10em;
+  opacity: 0.7;
+  /* border-radius: 13em; */
+  background: linear-gradient(#15e0ff, #8a15ff);
+  /* background: #E11D48; */
+  -webkit-animation: rotation 7s linear infinite;
+          animation: rotation 7s linear infinite;
+}
+
+.main__text-wrapper:after {
+  z-index: -1;
+  left: 0em;
+  bottom: -18em;
+  width: 20em;
+  height: 20em;
+  border-radius: 20em;
+  background: linear-gradient(#00507F, #8a15ff);
+  /* background: #10B981; */
+  -webkit-animation: rotation 7s linear infinite;
+          animation: rotation 7s linear infinite;
+}
+
+.arrow {
+  z-index: 98;
+  opacity: 0.5;
+  position: absolute;
+}
+
+.arrow--top {
+  top: 0;
+  left: -5em;
+}
+
+.arrow--bottom {
+  bottom: 0;
+  right: 3em;
+}
+
+.circle {
+  transform: translate(50%, -50%) rotate(0deg);
+  transform-origin: center;
+}
+.circle--ltblue {
+  height: 20em;
+  width: 20em;
+  border-radius: 20em;
+  background: linear-gradient(#15e0ff, #3800e7);
+}
+
+.backdrop {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: block;
+  background-color: pink;
+}
+
+.dotted-circle {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  opacity: 0.3;
+  -webkit-animation: rotation 38s linear infinite;
+          animation: rotation 38s linear infinite;
+}
+
+.draw-in {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 10;
+  -webkit-animation: draw 15s ease-in-out alternate infinite;
+          animation: draw 15s ease-in-out alternate infinite;
+}
+
+@-webkit-keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+.item-to {
+  -webkit-animation-duration: 10s;
+          animation-duration: 10s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  transform-origin: bottom;
+}
+
+.bounce-1 {
+  -webkit-animation-name: bounce-1;
+          animation-name: bounce-1;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+.bounce-2 {
+  -webkit-animation-name: bounce-2;
+          animation-name: bounce-2;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+.bounce-3 {
+  -webkit-animation-name: bounce-3;
+          animation-name: bounce-3;
+  -webkit-animation-timing-function: ease;
+          animation-timing-function: ease;
+}
+
+@-webkit-keyframes bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce-1 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes bounce-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes bounce-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes bounce-3 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(30px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@-webkit-keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@-webkit-keyframes gradient-fade {
+  from {
+    transform: translate(10%, -10%) rotate(0deg);
+  }
+  to {
+    transform: translate(50%, -50%) rotate(360deg);
+  }
+}
+@keyframes gradient-fade {
+  from {
+    transform: translate(10%, -10%) rotate(0deg);
+  }
+  to {
+    transform: translate(50%, -50%) rotate(360deg);
+  }
+}
+@-webkit-keyframes gradient-fade-alt {
+  from {
+    transform: translate(-20%, 20%) rotate(0deg);
+  }
+  to {
+    transform: translate(-60%, 60%) rotate(360deg);
+  }
+}
+@keyframes gradient-fade-alt {
+  from {
+    transform: translate(-20%, 20%) rotate(0deg);
+  }
+  to {
+    transform: translate(-60%, 60%) rotate(360deg);
+  }
+}
+
+#s1,#s2,#s3 {
+  overflow:hidden;
+  white-space:nowrap;
+  width: 100%;
+}
+
+#s1 {
+animation:s1 3s ;
+}
+@keyframes s1 {
+      0% { width:0%; }
+      33% { width:100%; }
+      to { width:100%; }
+}
+
+#s2 {
+animation:s2 3s ;
+}
+
+@keyframes s2 {
+      0% { width:0em; }
+      33% { width:0em; }
+      66% { width:100%; }
+      to { width:100%; }
+}
+#s3 {
+animation:s3 3s ;
+}
+
+@keyframes s3 {
+      0% { width:0em; }
+      66% { width:0em; }
+      to { width:5em; }
+}
+
