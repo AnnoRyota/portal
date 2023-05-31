@@ -133,6 +133,56 @@ a.active::before {
 @tailwind components;
 @tailwind utilities;
 
+.ball {
+  color: #fff;
+  background: linear-gradient(#38bdf8,#00507F);
+  /* box-shadow: -3px -3px 10px #cffafe,3px 3px 10px #00507F; */
+  -webkit-animation: move1 4s linear infinite;
+          animation: move1 4s linear infinite;
+}
+
+@keyframes move1 {
+  0% {
+    transform: translate(.8);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: translate(1);
+  }
+}
+
+.ball#ball2 {
+  background: linear-gradient(#15e0ff, #8a15ff);
+  transform: rotate(35deg);
+}
+
+.ball#ball2 p {
+  transform: rotate(-35deg);
+}
+
+.ball#ball4 {
+  background: linear-gradient(#15e0ff, #8a15ff);
+}
+
+.ball#ball3,.ball#ball5 {
+  background: linear-gradient(#8a15ff,#db2777);
+}
+
+.ball#ball6 {
+  background: linear-gradient(#38bdf8,#00507F);
+  transform: rotate(15deg);
+}
+
+.ball#ball7 {
+  background: linear-gradient(#4338ca,#38bdf8);
+}
+
+.ball#ball6 p {
+  transform: rotate(-15deg);
+}
+
 /* anime */
 
 .anime_wrap {
