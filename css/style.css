@@ -137,8 +137,8 @@ a.active::before {
   color: #fff;
   background: linear-gradient(#38bdf8,#00507F);
   /* box-shadow: -3px -3px 10px #cffafe,3px 3px 10px #00507F; */
-  -webkit-animation: move1 4s linear infinite;
-          animation: move1 4s linear infinite;
+  /* -webkit-animation: move1 4s linear infinite; */
+          /* animation: move1 4s linear infinite; */
 }
 
 @keyframes move1 {

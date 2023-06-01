@@ -6,6 +6,8 @@ $(window).scroll(function (){
 
       if (scroll > offset - wHeight + wHeight/2){
         $(this).addClass("show");
+      } else {
+        $(this).removeClass("show");
       }
     });
   });
