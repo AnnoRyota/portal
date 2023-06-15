@@ -218,7 +218,7 @@ a.active::before {
 }
 
 .anime_wrap video {
-  width: 70%;
+  width: 80%;
   margin: 0 auto;
   padding: 100px 0;
     opacity: 0;
