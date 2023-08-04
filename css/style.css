@@ -50,20 +50,26 @@ h2.title {
   border-image-slice: 1;
   width: fit-content;
   padding-bottom: 8px;
-  font-size: 6rem;
+  font-size: 5rem;
   text-transform: uppercase;
   font-weight: bolder;
   line-height: 1;
   margin: 0 auto 30px;
+
+  @media(max-width: 768px) {
+    font-size: 3rem;
+  }
 }
 
 p {
   font-weight: light;
   letter-spacing: 1px;
+  line-height: 1.75;
 }
 
 .text p {
   margin-bottom: 1.5rem;
+  line-height: 2.5;
 }
 
 img {
@@ -90,6 +96,7 @@ a.active::before {
 
 .tag {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   text-align: center;
   color: #fff;
@@ -126,7 +133,6 @@ a.active::before {
   box-shadow:
   -10px -10px 35px #ffffff,
   10px 10px 35px #cccccc;
-
 }
 
 @tailwind base;
@@ -225,6 +231,11 @@ a.active::before {
     transform: scale(.8);
     transition: 1.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     transition-delay: .4s;
+
+    @media(max-width: 768px) {
+    width: 100%;
+    padding: 50px 16px;
+  }
 }
 .anime_wrap.show video {
     opacity: 1;
@@ -255,6 +266,11 @@ $magenta: #d000c5;
 #38bdf8
 
 // This is an example of animations & svgs... I completely understand that the amount of absolute positioning in this file is insane... ;) <3 */
+.detail .mainvisual {
+  background: #fff;
+  width: 100%;
+  height: calc(680/1920*100vw);
+}
 
 .mainvisual {
   background: linear-gradient(#38bdf8,#00507F);
@@ -298,6 +314,7 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 10;
+  overflow: hidden;
 }
 
 .main:before, .main:after {
@@ -309,7 +326,7 @@ header {
 
 .main:before {
   right: 0;
-  bottom: -19;
+  bottom: 19rem;
   height: 22em;
   width: 22em;
   border-radius: 30em;
@@ -318,6 +335,13 @@ header {
   align-self: flex-end;
   -webkit-animation: gradient-fade 8s ease-in-out 3s infinite alternate;
           animation: gradient-fade 8s ease-in-out 3s infinite alternate;
+}
+
+@media(max-width: 768px) {
+  .main:before {
+    height: 15em;
+    width: 15em;
+  }
 }
 
 .main:after {
@@ -333,9 +357,20 @@ header {
           animation: gradient-fade-alt 6s ease-in-out 3s infinite alternate;
 }
 
+@media(max-width: 768px) {
+  .main:after {
+
+  }
+}
+
 .main__text-wrapper {
   position: relative;
   padding: 2rem;
+
+   @media(max-width: 768px) {
+    padding: 1.5rem 0;
+  }
+
 }
 
 .main__text-wrapper:before, .main__text-wrapper:after {
@@ -358,33 +393,60 @@ header {
           animation: rotation 7s linear infinite;
 }
 
+@media(max-width: 768px) {
+  .main__text-wrapper:before {
+    top: -50%;
+    right: -25%;
+    height: 7em;
+    width: 7em;
+  }
+}
+
 .main__text-wrapper:after {
   z-index: -1;
   left: 0em;
   bottom: -18em;
   width: 20em;
   height: 20em;
-  border-radius: 20em;
+  border-radius: 20rem;
   background: linear-gradient(#00507F, #8a15ff);
   /* background: #10B981; */
   -webkit-animation: rotation 7s linear infinite;
           animation: rotation 7s linear infinite;
+
 }
+
+@media screen and (max-width: 768px) {
+  .main__text-wrapper:after {
+    bottom: -20em;
+    height: 15rem;
+    width: 15rem;
+  }
+  }
 
 .arrow {
   z-index: 98;
   opacity: 0.5;
   position: absolute;
+
 }
 
 .arrow--top {
   top: 0;
-  left: -5em;
+  left: -5rem;
+  @media(max-width: 768px) {
+    left: -10em;
+    width: 100px;
+  }
 }
 
 .arrow--bottom {
   bottom: 0;
   right: 3em;
+
+  @media(max-width: 768px) {
+    display: none;
+  }
 }
 
 .circle {
@@ -392,10 +454,14 @@ header {
   transform-origin: center;
 }
 .circle--ltblue {
-  height: 20em;
-  width: 20em;
+  height: 20rem;
+  width: 20rem;
   border-radius: 20em;
   background: linear-gradient(#15e0ff, #3800e7);
+  @media(max-width: 768px) {
+    height: 10rem;
+    width: 10rem;
+  }
 }
 
 .backdrop {
@@ -605,8 +671,8 @@ animation:s2 3s ;
 }
 
 @keyframes s2 {
-      0% { width:0em; }
-      33% { width:0em; }
+      0% { width:0%; }
+      33% { width:0%; }
       66% { width:100%; }
       to { width:100%; }
 }
@@ -615,8 +681,8 @@ animation:s3 3s ;
 }
 
 @keyframes s3 {
-      0% { width:0em; }
-      66% { width:0em; }
-      to { width:5em; }
+      0% { width:0%; }
+      66% { width:0%; }
+      to { width:100%; }
 }
 
