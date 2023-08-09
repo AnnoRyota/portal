@@ -109,6 +109,159 @@ a.active::before {
   padding: 4px 8px;
 }
 
+/* メニューのCSS */
+#nav.panelactive{
+  position:fixed;
+  z-index: 999;
+  top: 0;
+  width:100%;
+    height: 100vh;
+}
+
+.circle-bg {
+  position: fixed;
+  z-index:3;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #00507F;
+  transform: scale(0);
+  right:-50px;
+    top:-50px;
+    transition: all .6s;
+}
+
+.circle-bg.circleactive{
+  transform: scale(50);
+}
+
+#nav-list{
+    display: none;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+#nav.panelactive #nav-list{
+     display: block;
+}
+
+/*ナビゲーション*/
+#nav ul {
+  opacity: 0;
+  position: absolute;
+  z-index: 999;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+#nav.panelactive ul {
+    opacity:1;
+}
+
+/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+#nav.panelactive ul li{
+animation-name:naviAnime;
+animation-duration:1s;
+animation-delay:.2s;/*0.2 秒遅らせて出現*/
+animation-fill-mode:forwards;
+opacity:0;
+}
+@keyframes naviAnime{
+0% {
+opacity: 0;
+}
+100% {
+opacity: 1;
+}
+}
+
+
+/*リストのレイアウト設定*/
+#nav li {
+  text-align: center;
+  list-style: none;
+}
+
+#nav li a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: bold;
+}
+
+.nav-toggle {
+  position:fixed;
+  top: 0;
+  right: 0;
+  z-index: 9999;
+  cursor: pointer;
+  width: 6rem;
+  height: 6rem;
+  background-color: #00507F;
+  border-bottom-left-radius: 100%;
+  mix-blend-mode:screen;
+  opacity: .99;
+}
+
+.openbtn1 span{
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  right: 1.5rem;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 1.5rem;
+  }
+
+.openbtn1 span:nth-of-type(1) {
+  top: 1.5rem;
+}
+
+.openbtn1 span:nth-of-type(2) {
+  top: 2rem;
+}
+
+.openbtn1 span:nth-of-type(3) {
+  top: 2.5rem;
+}
+
+.nav-toggle p {
+  position: absolute;
+  top: 2.75rem;
+  right: 1.125rem;
+  color: #fff;
+  font-size: .75rem;
+}
+
+.nav-toggle.active .openbtn1 span:nth-of-type(1) {
+    top: 1.5rem;
+    right: 1.5rem;
+    transform: translateY(6px) rotate(-45deg);
+    width: 1.5rem;
+    background-color: #fff;
+}
+
+.nav-toggle.active .openbtn1 span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.nav-toggle.active .openbtn1 span:nth-of-type(3){
+    top: 2.25rem;
+    right: 1.5rem;
+    transform: translateY(-6px) rotate(45deg);
+    width: 1.5rem;
+    background-color: #fff;
+}
+
 /*  */
 
 .input {

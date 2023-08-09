@@ -39,22 +39,31 @@
   </head>
   <body class="text-slate-900 bg-[#FAFAFA]">
     <header class="flex items-center w-full h-16 pr-6 gap-4 justify-between">
-      <div class="flex items-center gap-8">
-        <div class="max-w-[213.333px] h-full">
-        <a href="index.html">
-        <img class="w-full h-full object-cover object-center" src="images/kindai_logo.png" alt="">
-        </a>
-      </div>
-      <ul class="flex gap-4 text-base text-primary font-semibold">
-        <li><a href="about.html">KINDAI DESIGN CREATIVITY LABとは</a></li>
-        <li><a href="researcher.html">研究者/教員</a></li>
-        <li><a href="contact.html" target="_blank">企業の方はこちら</a></li>
-      </ul>
+      <div class="hidden sm:block h-16">
+        <a href="index.html"><img class="h-full" src="images/kindai_logo.png" alt=""></a>
       </div>
 
-      <div class="border-2 border-primary rounded-lg justify-item-end text-sm text-primary font-bold italic py-2 px-4">
-        <a href="https://pf.staging.kindai.design/" class="block" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>Design Community</a>
+      <div class="nav-toggle">
+        <div class="openbtn1"><span></span><span></span><span></span></div>
+        <p>menu</p>
       </div>
+
+      <nav id="nav">
+        <div id="nav-list">
+          <ul class="text-xl">
+          <!-- <li><img class="w-[280px] mx-auto" src="images/kindai_logo.png" alt=""></li> -->
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="about.html">ABOUT<br><span class="text-xs text-white/50 font-normal">KINDAI DESIGN CREATIVITY LABとは</span></a></li>
+          <li><a href="researcher.html">RESEARCHER<br><span class="text-xs text-white/50 font-normal">研究者/教員</span></a></li>
+          <li><a href="contact.html" target="_blank">CONTACT<br><span class="text-xs text-white/50 font-normal">企業の方はこちら</span></a></li>
+
+          <li><div class="w-[280px] my-4 mx-auto border-2 border-primary rounded-lg justify-item-end text-sm text-primary font-bold italic">
+        <a href="https://pf.staging.kindai.design/" class="block" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>Design Community</a>
+      </div></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="circle-bg"></div>
     </header>
 
     <main class="detail w-full bg-[url('images/bg.png')] bg-full bg-no-repeat bg-left">
@@ -121,15 +130,15 @@
     </main>
 
     <footer class="bg-[#00507F] text-white">
-      <div class="w-4/5 py-8 mx-auto flex justify-between items-center">
+      <div class="w-full lg:w-4/5 px-4 lg:px-0 py-8 mx-auto flex flex-col md:flex-row justify-between items-center">
       <div>
-      <div class="flex gap-6 text-sm pb-4 tracking-wide">
+      <div class="flex flex-wrap gap-3 md:gap-6 text-sm pb-4 tracking-wide">
         <p>ご利用ガイド</p>
         <p>よくあるご質問</p>
         <p>ご利用ガイド</p>
         <p>お問い合わせ</p>
       </div>
-      <div class="flex gap-6 text-xs pb-4">
+      <div class="flex flex-wrap gap-3 md:gap-6 text-xs pb-4">
         <p>在校生向け情報</p>
         <p>保護者向け情報</p>
         <p>卒業生向けサービス</p>
@@ -138,7 +147,7 @@
       </div>
       <small class="block">&copy;KINDAI UNIVERSITY All Right Reserved.</small>
       </div>
-      <div class="h-20">
+      <div class="h-20 mt-4 lg:mt-0">
         <img class="h-full" src="images/kindai_logo.png" alt="">
       </div>
       </div>

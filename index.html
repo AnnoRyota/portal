@@ -37,24 +37,32 @@
   <body class="text-slate-900">
     <div class="mainvisual">
     <header class="flex items-center w-full h-16 pr-6 gap-4 justify-between">
-      <div class="flex items-center gap-8">
-        <div class="max-w-[213.333px] h-full">
-        <a href="index.html">
-        <img class="w-full h-full object-cover object-center" src="images/kindai_logo.png" alt="">
-        </a>
-      </div>
-      <ul class="hidden md:flex gap-4 text-base text-white font-semibold">
-        <li><a href="about.html">KINDAI DESIGN CREATIVITY LABとは</a></li>
-        <li><a href="researcher.html">研究者/教員</a></li>
-        <li><a href="contact.html" target="_blank">企業の方はこちら</a></li>
-      </ul>
+      <div class="hidden sm:block h-16">
+        <a href="index.html"><img class="h-full" src="images/kindai_logo.png" alt=""></a>
       </div>
 
-      <div class="hidden md:block border-2 border-white rounded-lg justify-item-end text-sm text-white font-bold italic py-2 px-4">
-        <a href="https://pf.staging.kindai.design/" class="block" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>Design Community</a>
+      <div class="nav-toggle">
+        <div class="openbtn1"><span></span><span></span><span></span></div>
+        <p>menu</p>
       </div>
+
+      <nav id="nav">
+        <div id="nav-list">
+          <ul class="text-xl">
+          <!-- <li><img class="w-[280px] mx-auto" src="images/kindai_logo.png" alt=""></li> -->
+          <li><a href="index.html">TOP</a></li>
+          <li><a href="about.html">ABOUT<br><span class="text-xs text-white/50 font-normal">KINDAI DESIGN CREATIVITY LABとは</span></a></li>
+          <li><a href="researcher.html">RESEARCHER<br><span class="text-xs text-white/50 font-normal">研究者/教員</span></a></li>
+          <li><a href="contact.html" target="_blank">CONTACT<br><span class="text-xs text-white/50 font-normal">企業の方はこちら</span></a></li>
+
+          <li><div class="w-[280px] my-4 mx-auto border-2 border-primary rounded-lg justify-item-end text-sm text-primary font-bold italic">
+        <a href="https://pf.staging.kindai.design/" class="block" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>Design Community</a>
+      </div></li>
+          </ul>
+        </div>
+      </nav>
+      <div class="circle-bg"></div>
     </header>
-    <!-- <video id="video" src="images/AdobeStock_556567391_Video_HD_Preview.mov" poster="" webkit-playsinline playsinline muted autoplay loop></video> -->
     <div class="arrow arrow--top">
     <svg xmlns="http://www.w3.org/2000/svg" width="270.11" height="649.9" overflow="visible">
       <style>
@@ -124,8 +132,7 @@
 
       <div class="w-full h-full mx-auto aspect-video">
         <div class="anime_wrap overflow-hidden">
-          <video src="images/video/AdobeStock_240422015_Video_4K_Preview_3.mp4" class="w-full h-full" autoplay muted loop controls></video>
-          <!-- <video src="images/main.mp4" class="w-full h-full" autoplay muted loop controls></video> -->
+          <video src="images/main.mp4" class="w-full h-full" autoplay muted loop controls></video>
         </div>
       </div>
 
@@ -134,12 +141,12 @@
           <h2 class="title tracking-wider">Keywords</h2>
           <div class="w-[90%] lg:w-[70%] text-xs lg:text-sm mx-auto py-10 md:py-[80px] flex flex-wrap gap-6 md:gap-8 lg:gap-14 px-0 md:px-6 lg:px-10 justify-center font-semibold tracking-wider">
             <div class="ball w-[85px] md:w-[120px] lg:w-[180px] h-[85px] md:h-[120px] lg:h-[180px] mt-4 text-center rounded-full leading-[83px] md:leading-[118px] lg:leading-[178px]">#デザイン</div>
-            <div class="ball w-[85px] md:w-[120px] lg:w-[180px] h-[85px] md:h-[120px] lg:h-[180px] text-center leading-[83px] md:leading-[118px] lg:leading-[178px]" id="ball2"><p>#デザイン</p></div>
+            <div class="ball w-[85px] md:w-[120px] lg:w-[180px] h-[85px] md:h-[120px] lg:h-[180px] text-center leading-[83px] md:leading-[118px] lg:leading-[178px]" id="ball2"><p class="leading-[83px] md:leading-[118px] lg:leading-[178px]">#デザイン</p></div>
             <div class="ball w-[85px] md:w-[120px] lg:w-[180px] h-[85px] md:h-[120px] lg:h-[180px] mt-6 text-center rounded-full leading-[83px] md:leading-[118px] lg:leading-[178px]" id="ball3">#デザイン</div>
             <div class="ball w-[85px] md:w-[120px] lg:w-[180px] h-[85px] md:h-[120px] lg:h-[180px] ml-4 text-center rounded-full leading-[83px] md:leading-[118px] lg:leading-[178px]" id="ball4">#デザイン</div>
             <!-- <div></div> -->
-            <div class="ball w-[85px] md:w-[120px] lg:w-[180px] h-[85px] md:h-[120px] lg:h-[180px] text-center rounded-full leading-[83px] md:leading-[118px] lg:leading-[178px]" id="ball5"><p>#デザイン</p></div>
-            <div class="ball w-[85px] md:w-[120px] lg:w-[180px] h-[85px] md:h-[120px] lg:h-[180px] mt-4 text-center leading-[83px] md:leading-[118px] lg:leading-[178px]" id="ball6"><p>#デザイン</p></div>
+            <div class="ball w-[85px] md:w-[120px] lg:w-[180px] h-[85px] md:h-[120px] lg:h-[180px] text-center rounded-full leading-[83px] md:leading-[118px] lg:leading-[178px]" id="ball5"><p class="leading-[83px] md:leading-[118px] lg:leading-[178px]">#デザイン</p></div>
+            <div class="ball w-[85px] md:w-[120px] lg:w-[180px] h-[85px] md:h-[120px] lg:h-[180px] mt-4 text-center" id="ball6"><p class="leading-[83px] md:leading-[118px] lg:leading-[178px]">#デザイン</p></div>
             <div class="ball w-[85px] md:w-[120px] lg:w-[180px] h-[85px] md:h-[120px] lg:h-[180px] text-center rounded-full leading-[83px] md:leading-[118px] lg:leading-[178px]" id="ball7">#デザイン</div>
           </div>
           <div class="w-full md:w-2/3 mx-auto px-4 md:px-0">
