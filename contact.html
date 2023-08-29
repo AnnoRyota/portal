@@ -81,56 +81,56 @@
         <!-- <h2 class="pb-10 text-2xl leading-10 font-bold tracking-wider">企業の方はこちら</h2> -->
         <div class="bg-white/80 w-full rounded-md py-[50px] px-4 sm:px-8 lg:px-[80px] backdrop-blur-sm drop-shadow-lg tracking-wide">
           <h3 class="text-xl font-semibold text-center pb-10">企業様向けお問合せフォーム</h3>
-          <form action="submit" class="flex flex-col gap-8">
+          <form id="mail_form" class="flex flex-col gap-8">
             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
               <label for="" class="w-[200px] block text-base font-medium text-slate-900">会社名</label>
-              <input type="text" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" placeholder="会社名を入力">
+              <input type="text" name="company_name" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" placeholder="会社名を入力">
             </div>
             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
               <label for="" class="w-[200px] block text-base font-medium text-slate-900">業種</label>
               <!-- <input type="text" class="bg-[#FAFAFA] w-full py-2 px-4 border border-slate-300"> -->
-              <select id="countries" class="w-[240px] bg-[#FAFAFA] border border-slate-300 text-slate-900 text-sm focus:ring-blue-500 focus:border-blue-500 block px-4 py-2">
+              <select id="countries" name="industry" class="w-[240px] bg-[#FAFAFA] border border-slate-300 text-slate-900 text-sm focus:ring-blue-500 focus:border-blue-500 block px-4 py-2">
                 <option selected class="text-slate-700">業種を選択</option>
-                <option value="1">1. 製造業</option>
-                <option value="2">2. サービス業</option>
-                <option value="3">3. 農林水産業</option>
-                <option value="4">4. 建設業</option>
-                <option value="5">5. その他</option>
+                <option value="製造業">1. 製造業</option>
+                <option value="サービス業">2. サービス業</option>
+                <option value="農林水産業">3. 農林水産業</option>
+                <option value="建設業">4. 建設業</option>
+                <option value="その他">5. その他</option>
               </select>
             </div>
             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
               <label for="" class="w-[200px] block text-base font-medium text-slate-900">所属部署名</label>
-              <input type="text" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" placeholder="所属部署を入力">
+              <input type="text" name="department" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" placeholder="所属部署を入力">
             </div>
             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
               <label for="" class="w-[200px] block text-base font-medium text-slate-900">担当者様氏名</label>
-              <input type="text" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" placeholder="担当者様氏名を入力">
+              <input type="text" name="contact_person" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" placeholder="担当者様氏名を入力">
             </div>
             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
               <label for="" class="w-[200px] block text-base font-medium text-slate-900">連絡先電話番号</label>
-              <input type="tel" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" placeholder="電話番号を入力">
+              <input type="tel" name="tel" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" placeholder="電話番号を入力">
             </div>
             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
               <label for="" class="w-[200px] block text-base font-medium text-slate-900">連絡先メールアドレス</label>
-              <input type="email" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" placeholder="メールアドレスを入力">
+              <input type="email" name="email" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" placeholder="メールアドレスを入力">
             </div>
             <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-4">
               <label for="" class="w-[200px] block text-base font-medium text-slate-900">問い合わせ種類</label>
-              <select id="countries" class="w-[240px] bg-[#FAFAFA] border border-slate-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block px-4 py-2">
+              <select id="countries" name="inquiry" class="w-[240px] bg-[#FAFAFA] border border-slate-300 text-gray-900 text-sm focus:ring-blue-500 focus:border-blue-500 block px-4 py-2">
                 <option selected class="text-slate-700">問い合わせ種類を選択</option>
-                <option value="1">1. 就職・採用関連</option>
-                <option value="2">2. 研究・関連プロジェクト</option>
-                <option value="3">3. インターンシップ・実習</option>
-                <option value="4">4. 大学カリキュラム・教育プログラム</option>
-                <option value="5">5. 提携・協力関係</option>
-                <option value="5">6. その他</option>
+                <option value="就職・採用関連">1. 就職・採用関連</option>
+                <option value="研究・関連プロジェクト">2. 研究・関連プロジェクト</option>
+                <option value="インターンシップ・実習">3. インターンシップ・実習</option>
+                <option value="大学カリキュラム・教育プログラム">4. 大学カリキュラム・教育プログラム</option>
+                <option value="提携・協力関係">5. 提携・協力関係</option>
+                <option value="その他">6. その他</option>
               </select>
             </div>
             <div class="flex flex-col sm:flex-row gap-4">
               <label for="" class="pt-2 w-[200px] block text-base font-medium text-slate-900">問い合わせ内容</label>
-              <textarea type="text" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" rows="4" placeholder="問い合わせ内容を入力"></textarea>
+              <textarea type="text" name="detail" class="grow bg-[#FAFAFA] py-2 px-4 border border-slate-300 placeholder:text-sm" rows="4" placeholder="問い合わせ内容を入力"></textarea>
             </div>
-            <input type="button" value="送信" class="w-fit my-4 py-1 px-6 mx-auto text-white bg-sky-700 rounded-md" >
+            <input type="button" value="送信" id="mail_send" class="w-fit my-4 py-1 px-6 mx-auto text-white bg-sky-700 rounded-md">
           </form>
         </div>
       </div><!-- keyword -->
@@ -150,4 +150,4 @@
 </html>
 
 <script src="js/menu.js"></script>
-
+<script src="js/mail.js"></script>
