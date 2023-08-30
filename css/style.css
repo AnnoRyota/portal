@@ -374,37 +374,6 @@ opacity: 1;
     transform: translate(1);
   }
 }
-
-.ball#ball2 {
-  background: linear-gradient(#15e0ff, #8a15ff);
-  transform: rotate(35deg);
-}
-
-.ball#ball2 p {
-  transform: rotate(-35deg);
-}
-
-.ball#ball4 {
-  background: linear-gradient(#15e0ff, #8a15ff);
-}
-
-.ball#ball3,.ball#ball5 {
-  background: linear-gradient(#8a15ff,#db2777);
-}
-
-.ball#ball6 {
-  background: linear-gradient(#38bdf8,#00507F);
-  transform: rotate(15deg);
-}
-
-.ball#ball7 {
-  background: linear-gradient(#4338ca,#38bdf8);
-}
-
-.ball#ball6 p {
-  transform: rotate(-15deg);
-}
-
 /* anime */
 
 .anime_wrap {
@@ -416,7 +385,7 @@ opacity: 1;
 }
 
 .anime_wrap::before,
-.anime_wrap::after{
+.anime_wrap::after {
     content: '';
     width: 100%;
     height: 100%;
@@ -426,13 +395,13 @@ opacity: 1;
     top: 0;
 }
 
-.anime_wrap::before{
+.anime_wrap::before {
     background: #00507F;
     z-index: 3;
     transition: 1s;
 }
 
-.anime_wrap::after{
+.anime_wrap::after {
     background: #00507F;
     z-index: 2;
     transition: 1s;
@@ -444,7 +413,7 @@ opacity: 1;
     transform: translateY(100%);
 }
 
-.anime_wrap video {
+/* .anime_wrap video {
   width: 80%;
   margin: 0 auto;
   padding: 100px 0;
@@ -457,8 +426,39 @@ opacity: 1;
     width: 100%;
     padding: 50px 16px;
   }
+} */
+
+
+.video video {
+  width: 80%;
+  margin: 0 auto;
+  padding: 100px 0;
+  opacity: 0;
+  transform: scale(.8);
+  transition: 1.2s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-delay: .4s;
+
+  /* -webkit-animation: fade 3s; */
+          /* animation: fade 3s; */
+
+  @media(max-width: 768px) {
+    width: 100%;
+    padding: 50px 16px;
+  }
 }
-.anime_wrap.show video {
+/*
+@keyframes fade {
+  from {
+    transform: scale(.8);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1
+  }
+} */
+
+.video.show video {
     opacity: 1;
     transform: scale(1);
 }
@@ -909,3 +909,13 @@ animation:s3 3s ;
       to { width:100%; }
 }
 
+
+/* Prot FES */
+.bg-left {
+  position: absolute;
+  width: 600px;
+  aspect-ratio: 1/1;
+  border-radius: 100%;
+  background: #334155;
+  left: -25%;
+}
