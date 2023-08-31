@@ -398,7 +398,7 @@ opacity: 1;
 .anime_wrap::before {
     background: #00507F;
     z-index: 3;
-    transition: 1s;
+    transition: .75s;
 }
 
 .anime_wrap::after {

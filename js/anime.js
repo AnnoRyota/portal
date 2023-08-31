@@ -4,7 +4,7 @@ $(window).scroll(function (){
       var scroll    = $(window).scrollTop();
       var wHeight   = $(window).height();
 
-      if (scroll > offset - wHeight + wHeight/2){
+      if (scroll > offset - wHeight + wHeight/10){
         $(this).addClass("show");
       } else {
         $(this).removeClass("show");
@@ -18,7 +18,7 @@ $(window).scroll(function (){
       var scroll    = $(window).scrollTop();
       var wHeight   = $(window).height();
 
-      if (scroll > offset - wHeight + wHeight/2){
+      if (scroll > offset - wHeight + wHeight/10){
         $(this).addClass("show");
       } else {
         $(this).removeClass("show");
