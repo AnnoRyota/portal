@@ -913,7 +913,7 @@ animation:s3 3s ;
 /* Prot FES */
 .bg-left {
   position: absolute;
-  width: 600px;
+  width: calc(600/1440*100vw);
   aspect-ratio: 1/1;
   border-radius: 100%;
   background: #334155;
