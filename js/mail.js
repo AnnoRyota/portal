@@ -5,7 +5,7 @@
 // 本番環境
 //const domain = 'https://pf.kindai.design';
 // ポータル
-const domain = 'https://www.kindai.design'
+const domain = 'https://www.kindai.design';
 
 const sendMailUrl = `${domain}/api/contact/company`;
 
