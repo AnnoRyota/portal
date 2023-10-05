@@ -950,7 +950,7 @@ animation:s3 3s ;
   }
 }
 
-.fadein {
+/* .fadein {
   animation: fadeInContents 1s linear forwards;
   /* animation-timeline: view(); */
   /* animation-range: entry, exit; */
@@ -966,7 +966,7 @@ animation:s3 3s ;
     opacity: 1;
     transform: translateX(0);
   }
-}
+} */
 
 
 
