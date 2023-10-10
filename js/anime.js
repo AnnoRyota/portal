@@ -24,8 +24,4 @@ $(window).scroll(function (){
         $(this).removeClass("show");
       }
     });
-});
-
-// const targetElement = document.querySelector('.poster');
-// targetElement.style.animationName = "fadeIn";
-// targetElement.style.animationName = "fadeOut";
+  });

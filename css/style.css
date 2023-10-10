@@ -781,6 +781,7 @@ header {
     transform: translateY(0);
   }
 }
+
 @-webkit-keyframes bounce-2 {
   0% {
     transform: translateY(0);
@@ -922,33 +923,81 @@ animation:s3 3s ;
 
 
 /* ポスターアニメーション */
-.poster {
+/* .poster {
   display: block;
   width: 100%;
+  animation: fadeIn 3s linear both, fadeOut 3s linear both;
+  transform: scale(1);
+  opacity: 0;
   animation: fadeIn linear both,
              fadeOut linear both;
   animation-timeline: view();
-  /* animation-range: contain 10% contain 100%; */
   animation-range: entry, exit;
+} */
+
+/* .poster {
+  display: block;
+  width: 100%;
+  transform: scale(1);
+  opacity: 1;
+} */
+.poster-container {
+  /* max-height: 100%; */
 }
 
+.poster {
+  /* display: block; */
+  /* width: 100%; */
+  opacity: 0;
+  transform: scale(2);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  /* animation-timeline: view();
+  animation-range: entry,exit; */
+}
+/*
 @keyframes fadeIn {
   0% {
-    scale: 2;
+    transform: scale(1.5);
     opacity: 0;
   }
   100% {
-    scale: 1;
+    transform: scale(1);
     opacity: 1;
   }
 }
 
 @keyframes fadeOut {
   to {
-    scale: 2;
+    transform: scale(1.5);
+    opacity: 0;
+  }
+} */
+/*
+
+@keyframes fadeIn {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  to {
+    transform: scale(2);
     opacity: 0;
   }
 }
+
+@-webkit-keyframes fadeOut {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+} */
 
 
 

@@ -17,6 +17,8 @@
     <link rel="stylesheet" href="https://use.typekit.net/wym8vcc.css">
     <link rel="stylesheet" href="css/style.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.10/highlight.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -77,6 +79,7 @@
       </nav>
       <div class="circle-bg"></div>
     </header>
+    <pre id="demo3"><code class="javascript"></code></pre>
     <main class="w-full">
       <!-- <div class="w-full lg:w-8/12 mx-auto pt-10 pb-4 px-3 lg:px-0">
         <h2 class="pb-10 text-xl md:text-2xl leading-10 font-bold tracking-wider">【速報】プロト・フェス開催決定！！！</h2>
@@ -88,9 +91,12 @@
         </div>
       </div> -->
 
-      <div class="poster w-full lg:w-8/12 mx-auto px-3 lg:px-0">
-        <img src="images/protfes/bg_01.jpg" alt="">
+      <div class="poster-container" id="poster-container">
+        <div class="poster w-full lg:w-8/12 mx-auto px-3 lg:px-0">
+          <img src="images/protfes/bg_01.jpg" alt="">
+        </div>
       </div>
+
       <div class="bg-ball"></div>
 
       <div class="w-full lg:w-8/12 mx-auto px-3 lg:px-0">
@@ -113,8 +119,10 @@
         </div>
       </div>
 
-      <div class="poster w-full lg:w-8/12 mx-auto px-3 lg:px-0">
+      <div class="w-full lg:w-8/12 mx-auto poster-container" id="poster-container">
+      <div class="poster mx-auto px-3 lg:px-0">
         <img src="images/protfes/bg_02.jpg" alt="">
+      </div>
       </div>
 
       <div class="bg-[url('images/protfes/bg.jpg')] w-full bg-right-bottom bg-no-repeat bg-contain pb-32">
@@ -149,11 +157,36 @@
             </div>
             <p>◎ 後援団体</p>
             <div class="flex gap-x-4">
-              <p>東大阪市、八尾市（申請中）</p>
+              <div class="w-44 h-14">
+                <img class="object-contain h-full" src="images/protfes/logo/logo_higashi.png" alt="">
+              </div>
+              <div class="w-44 h-14">
+                <img class="object-contain h-full" src="images/protfes/logo/logo_hachio.png" alt="">
+              </div>
             </div>
-            <p>◎ 協力団体</p>
-            <div class="flex gap-x-4">
-              <p>大阪商工会議所、神戸市、 LINEヤフー 、The DECK</p>
+            <p>◎ 協力公的機関・企業</p>
+            <div class="flex flex-wrap gap-4">
+              <div class="w-44 h-14">
+                <img class="object-contain h-full" src="images/protfes/logo/logo_kobe.png" alt="">
+              </div>
+              <div class="w-44 h-14">
+                <img class="object-contain h-full" src="images/protfes/logo/logo_osaka.png" alt="">
+              </div>
+              <div class="w-44 h-14">
+                <img class="object-contain h-full" src="images/protfes/logo/logo_arti.png" alt="">
+              </div>
+              <div class="w-44 h-14">
+                <img class="object-contain h-full" src="images/protfes/logo/logo_news.png" alt="">
+              </div>
+              <div class="w-44 h-14">
+                <img class="object-contain h-full" src="images/protfes/logo/logo_GOB.jpg" alt="">
+              </div>
+              <div class="w-44 h-14">
+                <img class="object-contain h-full" src="images/protfes/logo/logo_mix.png" alt="">
+              </div>
+              <div class="w-44 h-14">
+                <img class="object-contain h-full" src="images/protfes/logo/logo_deck.png" alt="">
+              </div>
             </div>
             <p>◎ 問い合わせ先</p>
             <div class="flex gap-x-4">
@@ -214,21 +247,24 @@
           </div>
         </div>
 
+        <div class="poster-container" id="poster-container">
         <div class="poster w-full">
           <img src="images/protfes/bg_03.jpg" alt="">
+        </div>
         </div>
 
         <div class="pb-8 sm:pb-12">
           <h4 class="pl-2 mb-6 text-base text-slate-700 font-bold border-l-4 border-slate-700">アワード（出展内容を参加者、出展者が様々な視点で評価し合う）</h4>
           <p class="text-[15px] leading-loose">
-            ※ 現時点での予定ですので、変更になる可能性があります<br>
-            ① フルスイングアワード（振り切っている）<br>
-            ② ムーンショットアワード（非常に困難そう。でも達成できれば大きなインパクトがある）<br>
+            ① フルスイングアワード（思い切って振り切っている）<br>
+            ② ムーンショットアワード（月に届くぐらい遠くを見据えている）<br>
             ③ ファインド・イシューアワード（見過ごされている世の中の問題を発見）<br>
-            ④ ポイント・オブ・ビューアワード（問題解決の視点がいいね。こんな手があったのか）<br>
-            ⑤ スモール・スマイルアワード（あれば世の中楽しくなる。思わずクスッと笑ってしまう）<br>
+            ④ スモール・スマイルアワード（あれば世の中楽しくなる。思わずクスッと笑ってしまう）<br>
+            ⑤ ネバー・ビーアワード（絶対世の中に存在しない）<br>
             ⑥ チェンジ・ザワールドアワード（世の中を大きく変えそう）<br>
-            ⑦ タフワーク・アワード（良い意味でたくさん汗をかいた、データの集め方、調査の念入り度、プロトタイプの工夫やつくりこみ）
+            ⑦ ポイント・オブ・ビューアワード（問題解決の捉え方がいいね。こんな手があったのか）<br>
+            ⑧ タフワーク・アワード（良い意味でたくさん汗をかいた、データの集め方、調査の念入り度、プロトタイプの工夫やつくりこみ）<br>
+            ⑨  Mix Leapアワード（LINEヤフー大阪オフィス）<br>
           </p>
         </div>
 
@@ -298,4 +334,6 @@
 </html>
 
 <script src="js/menu.js"></script>
-
+<script src="js/scroll-timeline.js"></script>
+<script src="js/cssanimation.js"></script>
+<!-- <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script> -->
