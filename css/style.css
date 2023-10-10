@@ -946,13 +946,14 @@ animation:s3 3s ;
 }
 
 .poster {
-  /* display: block; */
-  /* width: 100%; */
-  opacity: 0;
-  transform: scale(2);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  /* animation-timeline: view();
-  animation-range: entry,exit; */
+  width: 100%;
+  opacity: 1;
+  transform: scale(1);
+}
+
+.poster.no-entry-animation {
+  opacity: 1;
+  transform: scale(1);
 }
 /*
 @keyframes fadeIn {
