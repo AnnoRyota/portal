@@ -63,8 +63,8 @@ function animateScroll() {
       // 通常のアニメーションを適用
       poster.animate(
         {
-          opacity: [0.25, 1, 0],
-          transform: ['scale(1.3)', 'scale(1)', 'scale(1.5)'],
+          opacity: [0.1, 1, 0],
+          transform: ['scale(1.2)', 'scale(1)', 'scale(1.5)'],
         },
         {
           fill: 'both',
