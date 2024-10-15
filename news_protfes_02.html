@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 
   <head>
     <meta charset="UTF-8" />
@@ -67,6 +67,10 @@
 
       .divider .shape-fill {
         fill: #F4DA23;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #EC008C;
       }
     </style>
 
@@ -257,8 +261,8 @@
         </div>
 
         <div class="map w-auto flex-1 max-w-[500px]">
-          <div class="sticky top-5">
-            <h2 class="max-w-[300px] mx-auto pt-6 pb-4"><img src="images/protofes_02/logo.png" alt=""></h2>
+          <div class="sticky top-4 max-h-screen">
+            <h2 class="max-w-[300px] mx-auto pt-8 pb-8"><img src="images/protofes_02/logo.png" alt=""></h2>
             <img src="images/protofes_02/map.png" alt="">
           </div>
         </div>
@@ -3359,6 +3363,15 @@
         translate: ["120%", 0, -500],
       },
     },
+    injectStyles: [`
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #6FB9BE;
+    }
+    `],
   });
   swiperEl.initialize()
 
@@ -3376,6 +3389,15 @@
         translate: ["120%", 0, -500],
       },
     },
+    injectStyles: [`
+    .swiper-pagination-bullet {
+      width: 12px;
+      height: 12px;
+    }
+    .swiper-pagination-bullet-active {
+      background: #6FB9BE;
+    }
+    `],
   });
   swiper2El.initialize()
 </script>
