@@ -17,7 +17,7 @@ body {
   background-color: #fff;
   color: #0f172a;
   line-height: 1.5;
-  overflow-x: hidden;
+  overflow-x: hidden !important;
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
@@ -950,11 +950,12 @@ animation:s3 3s ;
 .booth_list .booth_row .booth_item {
   padding: 10px;
   transition: all .25s;
+  border-radius: 4px;
 }
 
 .booth_list .booth_row .booth_item:hover {
   transition: all .25s;
-  scale: 1.0875;
+  scale: 1.125;
   box-shadow: 0 0 15px rgba(0,0,0,.10);
   cursor: pointer;
   border-radius: 8px;
