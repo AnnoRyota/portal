@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja_JP">
 
   <head>
     <meta charset="UTF-8" />
@@ -203,8 +203,7 @@
         </div>
       </div>
     </div>
-    <main class="bg-[#FAFAFA] overflow-x-hidden">
-
+    <main class="relative bg-[#FAFAFA]">
       <div class="anime_wrap w-full h-auto">
         <!-- <a class="hover:opacity-50" href="news_protfes.html">
           <img class="object-cover" src="images/protfes/banner.png" alt="">
@@ -216,12 +215,22 @@
         </div>
       </div>
 
-      <div class="w-full md:w-11/12 lg:w-8/12 mx-auto py-12 md:py-24">
+      <div class="relative w-full md:w-11/12 lg:w-8/12 mx-auto py-12 md:py-24 !overflow-visible">
         <h2 class="title tracking-wide">Protofes</h2>
-        <div class="w-full mx-auto">
-          <a class="hover:opacity-80" href="news_protfes_02.html">
-            <img class="object-cover" src="images/protofes_02/banner_finished.png" alt="">
-          </a>
+        <div class="w-full mx-auto pt-12">
+          <img class="object-cover" src="images/protofes_03/protfes_banner.jpg" alt="">
+        </div>
+
+        <div class="space-y-10 w-fit mx-auto">
+          <div class="sticky top-0 py-[5vh] poster_03">
+            <img class="w-auto h-auto max-h-[90vh]" src="images/protofes_03/poster_01.jpg" alt="">
+          </div>
+          <div class="sticky top-0 py-[5vh] poster_03">
+            <img class="w-auto h-auto max-h-[90vh]" src="images/protofes_03/poster_02.jpg" alt="">
+          </div>
+          <div class="sticky top-0 py-[5vh] poster_03">
+            <img class="w-auto h-auto max-h-[90vh]" src="images/protofes_03/poster_03.jpg" alt="">
+          </div>
         </div>
       </div>
 
@@ -246,6 +255,12 @@
             梅澤氏は経営コンサルタントのプロフェッショナルで、日米オフィスで25年間、戦略・イノベーション・都市開発関連のコンサルティングの経験を経て観光と文化とまちづくりを繋ぐ活動に注力されており、令和４年に本学客員教授に就任されました。
           </p>
         </div>
+
+        <div class="w-full mx-auto pt-12">
+          <a class="hover:opacity-80" href="news_protfes_02.html">
+            <img class="object-cover" src="images/protofes_02/banner_finished.png" alt="">
+          </a>
+        </div>
       </div>
       <!-- news -->
 
@@ -253,8 +268,17 @@
       <div class="keywords relative">
         <div class="w-full mx-auto py-12 md:py-24 overflow-hidden">
           <h2 class="title tracking-wider">Topics</h2>
-          <swiper-container init="false" class="swiper mySwiper w-full px-3 sm:px-6" slides-per-view="3.25"
+          <swiper-container init="false" class="swiper mySwiper w-full px-3 sm:px-6 pt-10" slides-per-view="3.25"
             pagination='false' navigation="true" space-between="16" centered-slides="false" initial-slide="0">
+            <swiper-slide class="w-full">
+              <a href="news_topics_08.html">
+                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
+                  <img class="hover:opacity-70 h-full object-cover" src="images/topics_08/topic_01.jpg" alt="">
+                </div>
+                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">
+                  2025年度 デザイン・クリエイティブ研究所 デザインマネジメントセンター研究会を開催</p><span class="text-xs text-slate-500">2025.06.24</span>
+              </a>
+            </swiper-slide>
             <swiper-slide class="w-full">
               <a href="https://newscast.jp/news/1034455" target="_blank">
                 <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
@@ -339,7 +363,7 @@
         </div>
       </div> -->
 
-      <div class="keywords relative">
+      <div class="keywords relative overflow-x-hidden">
         <div class="w-full md:w-11/12 lg:w-8/12 mx-auto py-12 md:py-24">
           <h2 class="title tracking-wider">Keywords</h2>
 
@@ -472,7 +496,7 @@
       </div><!-- keyword -->
 
 
-      <div class="project pb-12 md:pb-24 relative">
+      <div class="project pb-12 md:pb-24 relative overflow-x-hidden">
         <!-- <div class="absolute w-[25%] top-[80%] -left-[12%]">
           <img class="w-full" src="images/item1.svg" alt="">
         </div> -->
@@ -582,6 +606,13 @@
           <img class="w-full" src="images/item2.svg" alt="">
         </div>
       </div><!-- project -->
+
+      <div class="sticky bottom-4 z-50">
+        <div class="w-full flex justify-end px-4">
+          <img class="w-[240px] sm:w-[280px] h-auto drop-shadow-md" src="images/protofes_03/protfes_comingsoon.png"
+            alt="">
+        </div>
+      </div>
     </main>
     <footer class="bg-[#00507F] text-white">
       <div
@@ -601,9 +632,9 @@
 </html>
 
 <script src="js/menu.js"></script>
-
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="js/anime.js"></script>
+<script src="js/cssanimation.js"></script>
 <script>
   var swiperEl = document.querySelector(".mySwiper");
   Object.assign(swiperEl, {
