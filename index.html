@@ -217,19 +217,30 @@
 
       <div class="relative w-full md:w-11/12 lg:w-8/12 mx-auto py-12 md:py-24 !overflow-visible">
         <h2 class="title tracking-wide">Protofes</h2>
-        <div class="w-full mx-auto pt-12">
+        <div class="w-full mx-auto pt-12 cursor-pointer hover:opacity-80" data-modal-target="protofes-modal"
+          data-modal-toggle="protofes-modal">
           <img class="object-cover" src="images/protofes_03/protfes_banner.jpg" alt="">
         </div>
 
-        <div class="space-y-10 w-fit mx-auto">
-          <div class="sticky top-0 py-[5vh] poster_03">
-            <img class="w-auto h-auto max-h-[90vh]" src="images/protofes_03/poster_01.jpg" alt="">
+        <div id="protofes-modal" tabindex="-1"
+          class="fixed top-0 left-0 right-0 z-50 hidden w-full h-screen overflow-x-hidden"
+          data-modal-hide="protofes-modal">
+          <div class="overflow-y-auto w-full h-full">
+            <div class="relative space-y-10 w-fit mx-auto">
+              <div class="sticky top-0 py-[2.5vh] poster_03">
+                <img class="w-auto h-auto max-h-[95vh] mx-auto" src="images/protofes_03/poster_01.jpg" alt="">
+              </div>
+              <div class="sticky top-0 py-[2.5vh] poster_03">
+                <img class="w-auto h-auto max-h-[95vh] mx-auto" src="images/protofes_03/poster_02.jpg" alt="">
+              </div>
+              <div class="sticky top-0 py-[5vh]">
+                <img class="w-auto h-auto max-h-[90vh] mx-auto" src="images/protofes_03/poster_03.jpg" alt="">
+              </div>
+            </div>
           </div>
-          <div class="sticky top-0 py-[5vh] poster_03">
-            <img class="w-auto h-auto max-h-[90vh]" src="images/protofes_03/poster_02.jpg" alt="">
-          </div>
-          <div class="sticky top-0 py-[5vh] poster_03">
-            <img class="w-auto h-auto max-h-[90vh]" src="images/protofes_03/poster_03.jpg" alt="">
+          <div class="absolute right-4 bottom-4 z-50">
+            <img class="w-[240px] sm:w-[280px] h-auto drop-shadow-md" src="images/protofes_03/protfes_comingsoon.png"
+              alt="">
           </div>
         </div>
       </div>
@@ -255,7 +266,7 @@
             梅澤氏は経営コンサルタントのプロフェッショナルで、日米オフィスで25年間、戦略・イノベーション・都市開発関連のコンサルティングの経験を経て観光と文化とまちづくりを繋ぐ活動に注力されており、令和４年に本学客員教授に就任されました。
           </p>
         </div>
-
+        <hr class="border border-slate-200 border-dashed mt-12">
         <div class="w-full mx-auto pt-12">
           <a class="hover:opacity-80" href="news_protfes_02.html">
             <img class="object-cover" src="images/protofes_02/banner_finished.png" alt="">
@@ -276,7 +287,7 @@
                   <img class="hover:opacity-70 h-full object-cover" src="images/topics_08/topic_01.jpg" alt="">
                 </div>
                 <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">
-                  2025年度 デザイン・クリエイティブ研究所 デザインマネジメントセンター研究会を開催</p><span class="text-xs text-slate-500">2025.06.24</span>
+                  2025年度 デザイン・クリエイティブ研究所 デザインマネジメントセンター研究会を開催</p><span class="text-xs text-slate-500">2025.8.27</span>
               </a>
             </swiper-slide>
             <swiper-slide class="w-full">
@@ -606,13 +617,6 @@
           <img class="w-full" src="images/item2.svg" alt="">
         </div>
       </div><!-- project -->
-
-      <div class="sticky bottom-4 z-50">
-        <div class="w-full flex justify-end px-4">
-          <img class="w-[240px] sm:w-[280px] h-auto drop-shadow-md" src="images/protofes_03/protfes_comingsoon.png"
-            alt="">
-        </div>
-      </div>
     </main>
     <footer class="bg-[#00507F] text-white">
       <div
@@ -635,6 +639,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script src="js/anime.js"></script>
 <script src="js/cssanimation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
 <script>
   var swiperEl = document.querySelector(".mySwiper");
   Object.assign(swiperEl, {
