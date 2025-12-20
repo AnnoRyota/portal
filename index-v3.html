@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KDU Mobile ｜ 近畿大学公式学生ポータルアプリ</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="css/lp.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/@lottiefiles/dotlottie-wc@0.6.2/dist/dotlottie-wc.js" type="module"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet">
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap"
+      rel="stylesheet">
+
+    <meta
+      descreption="KDU Mobileは、近畿大学からの通知や時間割、課題など学生生活に必要な情報を集約し、大学からの一方的な情報伝達ではなく学生が自分に合った形にカスタマイズした情報を入手できるポータルサイトです。" />
+    <meta name="keywords" content="KDU Mobile,近畿大学,学生ポータル,アプリ,ダウンロード,サポート,お知らせ,時間割,成績,キャンパス情報" />
+    <meta name="author" content="KDU Mobile" />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#005781',
+            },
+            fontSize: {
+              base: '15px',
+            }
+          }
+        }
+      }
+    </script>
+    <script>
+        (function (d) {
+          var config = {
+            kitId: 'soc0ico',
+            scriptTimeout: 3000,
+            async: true
+          },
+            h = d.documentElement, t = setTimeout(function () { h.className = h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive"; }, config.scriptTimeout), tk = d.createElement("script"), f = false, s = d.getElementsByTagName("script")[0], a; h.className += " wf-loading"; tk.src = 'https://use.typekit.net/' + config.kitId + '.js'; tk.async = true; tk.onload = tk.onreadystatechange = function () { a = this.readyState; if (f || a && a != "complete" && a != "loaded") return; f = true; clearTimeout(t); try { Typekit.load(config) } catch (e) { } }; s.parentNode.insertBefore(tk, s)
+        })(document);
+    </script>
+  </head>
+
+  <body class="lp relative text-slate-900">
+    <div
+      class="bg-[url('img/lpv2/bg_03.png')] bg-no-repeat bg-top-center bg-fixed bg-cover before:absolute before:inset-0 before:bg-white/30 before:z-[1]">
+      <header class="w-full p-4 sm:p-8 flex justify-between items-center relative z-10">
+        <div class="h-[48px] sm:h-[60px]">
+          <a href="index.html">
+            <img class="h-full object-contain" src="img/KDU logo_w.png" alt="">
+          </a>
+        </div>
+        <div class="w-[140px] sm:w-[180px]">
+          <a href="https://www.kindai.ac.jp/" target="_blank">
+            <img class="fill-primary" src="img/logo_blue.png" alt="">
+          </a>
+        </div>
+      </header>
+
+      <div class="mainvisual relative z-10">
+        <div class="w-full max-w-[1124px] max-[1124px]:px-5 mx-auto">
+          <div class="pt-10 pb-6 sm:py-10">
+            <h1 class="w-fit text-[80px] text-slate-800 leading-relaxed font-bold font-['Passion One'] mb-4">
+              <span class="inline bg-primary py-1 px-4 box-decoration-clone">
+                <span class="text-white text-[54px]">Welcome to</span> <span class="text-white font-[700]">KDU
+                  Mobile</span>
+              </span>
+            </h1>
+            <h2 class="w-fit text-white text-[24px] sm:text-[30px] font-[900]">
+              <span class="inline bg-primary py-1 px-4 box-decoration-clone">学生の声を反映した近畿大学の公式学生ポータルアプリ</span>
+            </h2>
+            <div class="flex gap-8 items-center pt-10">
+              <div class="w-[150px]">
+                <img class="h-full object-contain" src="img/appstore.svg" alt="">
+              </div>
+              <div class="w-[150px] rounded-lg overflow-hidden">
+                <img class="h-full object-contain" src="img/googleplay.png" alt="">
+              </div>
+            </div>
+            <p class="text-white text-sm mt-4 drop-shadow-[1.5px_1.5px_3px_rgba(0,0,0,.5)]">※現在は医学部・工学部でご利用いただけます。<br>
+              全学部向けには2026年8月頃のリリースを予定しています。</p>
+          </div>
+        </div>
+        <div class="w-full py-[60px] sm:py-[80px]">
+          <div class="max-w-[280px] sm:max-w-[360px] mx-auto">
+            <img class="w-full object-contain" src="img/sozai_01.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sticky top-0 h-screen bg-[url('img/bg_02.jpg')] bg-center bg-cover bg-no-repeat">
+    </div>
+
+    <main class="main-container relative w-full mx-auto -mt-[100vh] relative z-10">
+
+      <div class="w-full max-w-[1124px] max-[1124px]:px-5 py-[60px] sm:py-[80px] mx-auto">
+        <h3 class="text-right pb-10 text-white leading-relaxed"><span
+            class="inline bg-primary py-1 px-4 box-decoration-clone">ウィジェットスタイルのホームで<br>学生と大学のやり取りを最適化</span></h3>
+
+        <div class="w-full flex flex-col sm:grid grid-cols-[calc(55%-32px)_45%] gap-5 sm:gap-8 pb-5 sm:pb-8">
+          <div class="glass-card float-1 p-4 sm:p-6">
+            <h4 class="font-semibold pb-4">お知らせ</h4>
+            <div class="flex gap-4">
+              <div class="w-1/2">
+                <img class="w-full object-contain" src="img/sozai_02.png" alt="">
+              </div>
+              <div class="w-1/2">
+                <p class="!text-sm pb-2">⼤学からのお知らせが表⽰されます。</p>
+                <p class="!text-sm">ホームのウィジェットには未読のお知らせのみ表⽰されます。<br>
+                  スマートフォンではカード形式で簡単に既読・未読にすることができます。</p>
+              </div>
+            </div>
+          </div>
+          <div class="glass-card float-2 p-4 sm:p-6">
+            <h4 class="font-semibold pb-4">重要なお知らせ・アナウンス</h4>
+            <div>
+              <p class="!text-sm pb-2">大学からの重要なお知らせは重要なお知らせエリアに表示されます。</p>
+              <p class="!text-sm pb-2">その他に大学から伝えたいことはアナウンスとしてアナウンスエリアに表示されます。</p>
+            </div>
+            <div class="pt-4 flex flex-col items-center gap-4">
+              <div class="w-[80%]">
+                <p class="!text-xs font-bold pb-2">重要なお知らせ</p>
+                <img class="w-full object-contain" src="img/sozai_03.png" alt="">
+              </div>
+              <div class="w-[80%]">
+                <p class="!text-xs font-bold pb-2">アナウンス</p>
+                <img class="w-full object-contain" src="img/sozai_04.png" alt="">
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="w-full flex flex-col sm:grid grid-cols-[45%_calc(55%-32px)] gap-5 sm:gap-8">
+          <div class="glass-card float-3 p-4 sm:p-6 order-2 sm:order-1">
+            <h4 class="font-semibold pb-4">Classroom課題・Slack新着</h4>
+            <div class="flex gap-4 pb-4">
+              <div>
+                <img class="w-full object-contain" src="img/sozai_05.png" alt="">
+              </div>
+              <div>
+                <img class="w-full object-contain" src="img/sozai_06.png" alt="">
+              </div>
+            </div>
+            <p class="!text-sm text-center">Google Classroomの課題の表示やSlackの表示が可能です。</p>
+          </div>
+          <div class="glass-card float-4 p-4 sm:p-6 order-1 sm:order-2">
+            <h4 class="font-semibold pb-4">スケジュール</h4>
+            <div class="relative gap-4">
+              <div class="w-full md:w-[60%]">
+                <img class="w-full object-contain" src="img/sozai_07.png" alt="">
+              </div>
+              <p
+                class="w-full md:w-[calc(100%-44%-16px)] relative md:absolute pt-4 md:pt-0 top-0 md:top-4 right-0 !text-sm">
+                今日のスケジュールと週間のスケジュールウィジェットを配置することができます。
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="w-full max-w-[1124px] max-[1124px]:px-5 mx-auto py-[60px] sm:py-20">
+
+        <div class="hidden sm:flex gap-4 lg:gap-8">
+
+          <!-- 左側（画像固定） -->
+          <div class="w-[40%] sticky flex justify-center h-[80vh] top-24">
+            <div class="relative w-full max-w-[360px] h-full overflow-hidden">
+              <img id="fadeImage" src="img/sozai_08.png"
+                class="w-full h-full object-contain absolute inset-0 opacity-100 translate-y-0 transition-all duration-500">
+            </div>
+          </div>
+
+          <!-- 右側（通常スクロール・セクションを下に並べる） -->
+          <div class="relative w-[60%] space-y-[80vh]" id="sections">
+
+            <!-- 1 -->
+            <section class="section h-[80vh] pt-10">
+              <h3 class="lg:!text-[32px] !text-[24px] leading-relaxed font-bold text-white">
+                <span class="inline bg-primary py-1 px-4 box-decoration-clone">必要なお知らせにいち早く辿り着く<br>ことを目指しています</span>
+              </h3>
+              <p class="py-4">数多くのお知らせから見つけたいお知らせに辿り着けるよう、絞り込みや通知を行います。PDFや画像もプレビューからすぐに確認できます。</p>
+              <div class="ex text-xs">
+                <h5 class="font-semibold pb-1">絞り込み機能</h5>
+                <p class="pb-4">
+                  カテゴリでの絞り込み<br>
+                  未読のみ表示<br>
+                  一括既読<br>
+                  重要または個人宛での絞り込み<br>
+                  キーワード検索による絞り込み</p>
+                <h5 class="font-semibold pb-1">お知らせ通知</h5>
+                <p class="pb-4">
+                  メール通知<br>
+                  PUSH通知<br>
+                  カテゴリごとに通知の設定が可能</p>
+                <h5 class="font-semibold pb-1">その他</h5>
+                <p>
+                  PDFや画像をプレビュー表示可能</p>
+              </div>
+            </section>
+
+            <!-- 2 -->
+            <section class="section h-[80vh]">
+              <h3 class="lg:!text-[32px] !text-[24px] leading-relaxed font-bold text-white">
+                <span class="inline bg-primary py-1 px-4 box-decoration-clone">授業のスケジュールはホームの<br>スケジュールウィジェットで確認</span>
+              </h3>
+              <p class="py-4">ホーム画面に設置可能な今日/今週のスケジュールウィジェットは、履修している授業が表示されます。</p>
+              <div class="ex">
+                <p class="pb-4">※休講・補講・教室変更があった場合は、日毎のUNIPAデータ連携により更新・反映されます。</p>
+              </div>
+            </section>
+
+            <!-- 3 -->
+            <section class="section h-[80vh]">
+              <h3 class="lg:!text-[32px] !text-[24px] leading-relaxed font-bold text-white">
+                <span class="inline bg-primary py-1 px-4 box-decoration-clone">履修している時間割に<br>色やメモを追加して自分仕様に</span>
+              </h3>
+              <p class="py-4">学生からの要望が多かった時間割に色やメモを追加できる機能を追加しました。<br>
+                アプリではスクリーンショットを簡単に撮ることができ、友人に共有することができます。<br>
+                詳細画面ではClassroomのクラスコードの確認ができます。</p>
+              <div
+                class="w-[40%] max-w-[180px] lg:max-w-[240px] min-w-[180px] lg:min-w-[240px] rounded-lg overflow-hidden">
+                <img class="w-full object-contain" src="img/sozai_12.png" alt="">
+              </div>
+            </section>
+
+            <!-- 4 -->
+            <section class="section h-[80vh]">
+              <h3 class="lg:!text-[32px] !text-[24px] leading-relaxed font-bold text-white">
+                <span class="inline bg-primary py-1 px-4 box-decoration-clone">テーマを選んで自分だけの<br>KDU Mobileに</span>
+              </h3>
+              <p class="py-4">
+                テーマを選択して自分好みの画面デザインにすることができます。<br>カスタムテーマでは、自分の好きな画像をアップロードしたり、色を変更してより自分好みの画面にすることができます。
+              </p>
+              <div class="flex gap-10 justify-center pt-4">
+                <div
+                  class="w-[40%] max-w-[200px] lg:max-w-[280px] min-w-[180px] lg:min-w-[280px] rounded-lg overflow-hidden">
+                  <img class="w-full object-contain" src="img/sozai_13.png" alt="">
+                </div>
+                <div
+                  class="w-[30%] max-w-[160px] lg:max-w-[200px] min-w-[120px] lg:min-w-[200px] rounded-lg overflow-hidden">
+                  <img class="w-full object-contain" src="img/sozai_01.png" alt="">
+                  <p class="w-full py-2 text-center text-xs text-slate-600">デフォルトテーマ</p>
+                </div>
+              </div>
+            </section>
+
+            <div class="w-[100%] h-[80vh] !m-0 sticky bottom-6 flex items-end justify-end z-[-1]">
+              <div class="w-[160px]">
+                <img src="img/lpv2/bigblue.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-8 sm:hidden w-full">
+
+          <!-- 1 -->
+          <section class="section">
+            <div class="max-w-[240px] mx-auto mb-4">
+              <img src="img/sozai_08.png" alt="">
+            </div>
+            <h3 class="text-[24px] leading-relaxed font-bold text-white"><span
+                class="inline bg-primary py-1 px-4 box-decoration-clone">必要なお知らせにいち早く辿り着くことを目指しています</span></h3>
+            <p class="py-4">数多くのお知らせから見つけたいお知らせに辿り着けるよう、絞り込みや通知を行います。PDFや画像もプレビューからすぐに確認できます。</p>
+            <div class="ex text-xs">
+              <h5 class="font-semibold pb-1">絞り込み機能</h5>
+              <p class="pb-4">
+                カテゴリでの絞り込み<br>
+                未読のみ表示<br>
+                一括既読<br>
+                重要または個人宛での絞り込み<br>
+                キーワード検索による絞り込み</p>
+              <h5 class="font-semibold pb-1">お知らせ通知</h5>
+              <p class="pb-4">
+                メール通知<br>
+                PUSH通知<br>
+                カテゴリごとに通知の設定が可能</p>
+              <h5 class="font-semibold pb-1">その他</h5>
+              <p>
+                PDFや画像をプレビュー表示可能</p>
+            </div>
+          </section>
+
+          <!-- 2 -->
+          <section class="section">
+            <div class="max-w-[240px] mx-auto mb-4">
+              <img src="img/sozai_09.png" alt="">
+            </div>
+            <h3 class="text-[24px] leading-relaxed font-bold text-white"><span
+                class="inline bg-primary py-1 px-4 box-decoration-clone">授業のスケジュールはホームのスケジュールウィジェットで確認</span></h3>
+            <p class="py-4">ホーム画面に設置可能な今日/今週のスケジュールウィジェットは、履修している授業が表示されます。</p>
+            <div class="ex">
+              <p>※休講・補講・教室変更があった場合は、日毎のUNIPAデータ連携により更新・反映されます。</p>
+            </div>
+          </section>
+
+          <!-- 3 -->
+          <section class="section">
+            <div class="max-w-[240px] mx-auto mb-4">
+              <img src="img/sozai_10.png" alt="">
+            </div>
+            <h3 class="text-[24px] leading-relaxed font-bold text-white"><span
+                class="inline bg-primary py-1 px-4 box-decoration-clone">履修している時間割に色やメモを追加して自分仕様に</span></h3>
+            <p class="py-4">学生からの要望が多かった時間割に色やメモを追加できる機能を追加しました。<br>
+              アプリではスクリーンショットを簡単に撮ることができ、友人に共有することができます。<br>
+              詳細画面ではClassroomのクラスコードの確認ができます。</p>
+            <div
+              class="w-[40%] max-w-[180px] lg:max-w-[240px] min-w-[180px] lg:min-w-[240px] rounded-lg overflow-hidden">
+              <img class="w-full object-contain" src="img/sozai_12.png" alt="">
+            </div>
+          </section>
+
+          <!-- 4 -->
+          <section class="section">
+            <div class="max-w-[240px] mx-auto mb-4">
+              <img src="img/sozai_11.png" alt="">
+            </div>
+            <h3 class="text-[24px] leading-relaxed font-bold text-white"><span
+                class="inline bg-primary py-1 px-4 box-decoration-clone">テーマを選んで自分だけのKDU Mobileに</span></h3>
+            <p class="py-4">テーマを選択して自分好みの画面デザインにすることができます。<br>カスタムテーマでは、自分の好きな画像をアップロードしたり、色を変更してより自分好みの画面にすることができます。
+            </p>
+            <div class="flex gap-10 justify-center pt-4">
+              <div class="w-[50%] max-w-[220px] lg:max-w-[280px]rounded-lg overflow-hidden">
+                <img class="w-full object-contain" src="img/sozai_13.png" alt="">
+              </div>
+              <div class="w-[40%] max-w-[160px] lg:max-w-[200px]rounded-lg overflow-hidden">
+                <img class="w-full object-contain" src="img/sozai_01.png" alt="">
+                <p class="w-full py-2 text-center text-xs text-slate-600">デフォルトテーマ</p>
+              </div>
+            </div>
+          </section>
+
+        </div>
+      </div>
+
+
+
+      <div class="w-full py-[60px] sm:py-20 bg-white/80 backdrop-blur-10">
+        <div class="w-full max-w-[1124px] max-[1124px]:px-5 mx-auto">
+          <h3 class="pb-10 leading-relaxed text-white">
+            <span class="inline bg-primary py-1 px-4 box-decoration-clone">ブラウザとアプリ、同じ機能、同じデザインで<br>
+              <section id="countSection" class="inline bg-primary py-1 box-decoration-clone">
+                <span id="count-24" class="tabular-nums">0</span>時間<span id="count-365"
+                  class="tabular-nums">0</span>日ご利用いただけます。
+              </section>
+            </span>
+          </h3>
+
+          <div class="w-full rounded-xl overflow-hidden">
+            <img class="w-full " src="img/KDUMbanner.jpg" alt="">
+            <p class="pt-8 text-xl text-primary font-bold text-center">今後も使いやすく便利なアプリになるように、改善や新しい機能の追加をしていきます。</p>
+          </div>
+          <div class="py-10">
+            <div class="flex justify-center items-center flex-col pb-2">
+              <div class="w-[60px] sm:w-[80px] h-[60px] sm:h-[80px] rounded-[20.5%] overflow-hidden">
+                <img src="img/apple-touch-icon.png" alt="">
+              </div>
+              <small class="mt-2">KDU Mobile</small>
+            </div>
+            <div class="flex justify-center items-center flex-col gap-2 pb-4">
+              <p class="text-sm">スマートフォン、タブレットデバイスに対応</p>
+              <p class="text-lg text-center font-bold">アプリをダウンロード</p>
+            </div>
+            <div class="flex gap-4 justify-center items-center">
+              <img class="h-[40px]" src="img/appstore.svg" alt="">
+              <img class="h-[40px]" src="img/googleplay.png" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+      <footer class="bg-primary text-white py-10 text-center">
+        <div class="flex justify-center items-center gap-8 text-sm pb-5">
+          <p><a class="hover:opacity-80" href="https://www.kindai.ac.jp/privacy-policy/" target="_blank">プライバシーポリシー</a>
+          </p>
+          <p><a class="hover:opacity-80" href="https://www.kindai.ac.jp/contact/" target="_blank">お問い合わせ</a></p>
+        </div>
+        <div class="w-[140px] mx-auto pb-4">
+          <a class="hover:opacity-80" href="https://www.kindai.ac.jp/" target="_blank" rel="noopener noreferrer">
+            <img src="img/logo.svg" alt="">
+          </a>
+        </div>
+        <small>&copy;KINDAI UNIVERSITY All Rights Reserved.</small>
+      </footer>
+    </main>
+    <!-- <footer class="w-full h-8 bg-primary flex items-center justify-center">
+      <small class="text-xs text-white">&copy;KDU Mobile</small>
+    </footer> -->
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/bg.js"></script>
+    <script src="js/count.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+
+</html>
