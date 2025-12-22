@@ -1,0 +1,137 @@
+.map-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.map-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+}
+
+/* デバッグ用（本番では消す） */
+/* .hotspot {
+  background: rgba(0, 120, 255, 0.2);
+  outline: 1px dashed rgba(0, 120, 255, 0.8);
+} */
+
+.spot-01 { top:40.161%; left:45.128%; width:1.823%; height:2.581%; }
+.spot-02 { top:41.290%; left:43.191%; width:1.823%; height:2.581%; }
+.spot-03 { top:37.984%; left:38.462%; width:1.823%; height:2.581%; }
+.spot-04 { top:42.500%; left:40.684%; width:1.823%; height:2.581%; }
+.spot-05 { top:40.323%; left:36.752%; width:1.823%; height:2.581%; }
+.spot-06 { top:43.871%; left:39.145%; width:1.823%; height:2.581%; }
+.spot-07 { top:45.565%; left:33.048%; width:1.823%; height:2.581%; }
+.spot-08 { top:46.452%; left:36.809%; width:1.823%; height:2.581%; }
+.spot-09 { top:48.790%; left:32.877%; width:1.823%; height:2.581%; }
+.spot-10 { top:49.597%; left:36.581%; width:1.823%; height:2.581%; }
+
+.spot-11 { top:55.000%; left:32.080%; width:1.823%; height:2.581%; }
+.spot-12 { top:53.871%; left:35.897%; width:1.823%; height:2.581%; }
+.spot-13 { top:52.984%; left:39.430%; width:1.823%; height:2.581%; }
+.spot-14 { top:57.903%; left:32.479%; width:1.823%; height:2.581%; }
+.spot-15 { top:56.694%; left:36.182%; width:1.823%; height:2.581%; }
+.spot-16 { top:55.806%; left:39.658%; width:1.823%; height:2.581%; }
+.spot-17 { top:62.823%; left:35.567%; width:1.823%; height:2.581%; }
+.spot-18 { top:60.403%; left:38.816%; width:1.823%; height:2.581%; }
+.spot-19 { top:65.161%; left:36.468%; width:1.823%; height:2.581%; }
+.spot-20 { top:62.903%; left:39.772%; width:1.823%; height:2.581%; }
+
+.spot-21 { top:63.710%; left:64.273%; width:1.823%; height:2.581%; }
+.spot-22 { top:61.290%; left:60.969%; width:1.823%; height:2.581%; }
+.spot-23 { top:61.210%; left:65.471%; width:1.823%; height:2.581%; }
+.spot-24 { top:58.710%; left:62.221%; width:1.823%; height:2.581%; }
+.spot-25 { top:55.806%; left:61.881%; width:1.823%; height:2.581%; }
+.spot-26 { top:55.242%; left:58.063%; width:1.823%; height:2.581%; }
+.spot-27 { top:52.903%; left:62.108%; width:1.823%; height:2.581%; }
+.spot-28 { top:52.339%; left:58.405%; width:1.823%; height:2.581%; }
+.spot-29 { top:48.145%; left:65.356%; width:1.823%; height:2.581%; }
+.spot-30 { top:49.435%; left:62.108%; width:1.823%; height:2.581%; }
+
+.spot-31 { top:45.161%; left:65.071%; width:1.823%; height:2.581%; }
+.spot-32 { top:46.452%; left:61.481%; width:1.823%; height:2.581%; }
+.spot-33 { top:41.129%; left:60.969%; width:1.823%; height:2.581%; }
+.spot-34 { top:45.565%; left:58.632%; width:1.823%; height:2.581%; }
+.spot-35 { top:39.032%; left:58.689%; width:1.823%; height:2.581%; }
+.spot-36 { top:43.548%; left:56.866%; width:1.823%; height:2.581%; }
+.spot-37 { top:41.935%; left:54.929%; width:1.823%; height:2.581%; }
+.spot-38 { top:40.484%; left:52.479%; width:1.823%; height:2.581%; }
+
+.spot-39 { top:32.258%; left:30.37%; width:6.838%; height:6.452%; }
+.spot-40 { top:32.258%; left:64.501%; width:6.838%; height:6.452%; }
+.spot-41 { top:24.597%; left:64.501%; width:6.838%; height:6.452%; }
+
+
+
+/* ===== map ===== */
+.map-wrapper {
+  position: relative;
+}
+
+.map-wrapper img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.hotspot {
+  position: absolute;
+  cursor: pointer;
+  z-index: 10;
+}
+
+/* hover は視覚効果のみ（PC） */
+@media (hover: hover) {
+  .hotspot:hover {
+    outline: 2px solid rgba(0, 180, 255, 0.8);
+    background: rgba(0, 180, 255, 0.25);
+  }
+}
+
+/* ===== modal ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;
+  z-index: 1000;
+}
+
+.modal.is-open {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.modal-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+  position: relative;
+  width: min(90vw, 960px);
+  background: #000;
+  z-index: 1;
+}
+
+.modal video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  color: #fff;
+  font-size: 24px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
