@@ -1,9 +1,9 @@
 // ローカル環境
 //const domain = 'http://localhost';
 // ステージング環境
-const domain = 'https://pf.staging.kindai.design';
+// const domain = 'https://pf.staging.kindai.design';
 // 本番環境
-//const domain = 'https://pf.kindai.design';
+const domain = 'https://x.cybercampus.ac';
 
 const sendMailUrl = `${domain}/api/contact/company`;
 
