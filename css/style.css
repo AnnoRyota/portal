@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Mochiy+Pop+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=WDXL+Lubrifont+JP+N&display=swap');
 * {
   box-sizing: border-box;
 }
@@ -9,8 +9,6 @@ src: url('../font/Higashiosaka-Regular.woff')  format('woff'),
 url('../font/Higashiosaka-Regular.woff2')  format('woff2'),
 url('../font/Higashiosaka-Regular.ttf')  format('truetype');
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Righteous&display=swap');
 
 body {
   width: 100%;
@@ -65,6 +63,15 @@ h2.title {
   @media(max-width: 768px) {
     font-size: 3rem;
   }
+}
+
+h3.sokuhou {
+  font-family: "Mochiy Pop One", sans-serif;
+  /* font-family: "WDXL Lubrifont JP N", sans-serif; */
+  font-weight: 400;
+  font-style: normal;
+  -webkit-text-stroke: 1.5px #000;
+  paint-order: stroke fill;
 }
 
 p {
