@@ -1,802 +1,654 @@
 <!DOCTYPE html>
-<html lang="ja_JP">
+<html lang="ja">
 
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description"
-      content="デザイン・クリエイティブ研究所は、近畿大学が建学の精神として掲げる「実学教育と人格の陶冶」の実現に向けて、広義の｢デザイン｣に関する個別領域の研究を深めると共に、領域横断型の研究を実践していきます。この活動を通じて、社会が直面する問題の発見と解決および、その知見を活用した教育プログラム構築と普及を展開し、未来社会の創造に寄与していきます。">
-    <title>近畿大学デザイン・クリエイティブ研究所 | KINDAI DESIGN CREATIVITY LAB</title>
-    <meta property="og:type" content="website">
-    <!-- <meta property="og:url" content="https://www.cyberedu.co.jp/"> -->
-    <meta property="og:title" content="近畿大学デザイン・クリエイティブ研究所 | KINDAI DESIGN CREATIVITY LAB">
-    <meta property="og:description"
-      content="デザイン・クリエイティブ研究所は、近畿大学が建学の精神として掲げる「実学教育と人格の陶冶」の実現に向けて、広義の｢デザイン｣に関する個別領域の研究を深めると共に、領域横断型の研究を実践していきます。この活動を通じて、社会が直面する問題の発見と解決および、その知見を活用した教育プログラム構築と普及を展開し、未来社会の創造に寄与していきます。">
-    <meta property="og:image" content="https://www.kindai.design/images/description.png">
-    <meta property="og:site_name" content="近畿大学デザイン・クリエイティブ研究所 | KINDAI DESIGN CREATIVITY LAB">
+    <title>CYBER CAMPUS｜学びと学校をつなぐ教育ICTプラットフォーム</title>
+    <meta name="description" content="CYBER CAMPUSは、学生・教職員・保護者をつなぎ、学校運営と探究的な学びを支える教育ICTプラットフォームです。" />
+    <meta name="keywords" content="CYBER CAMPUS,サイバーキャンパス,教育ICT,学校ポータル,学ログ,eポートフォリオ,サイバーエデュケーションテクノロジーズ" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.cyberedu.co.jp/" />
+    <meta property="og:title" content="CYBER CAMPUS｜学びと学校をつなぐ教育ICTプラットフォーム" />
+    <meta property="og:description" content="学校生活の情報も、日々の学びも、未来のキャリアも。教育現場に関わるすべての人をつなぐ学校ポータル。" />
+    <meta property="og:image" content="https://www.cyberedu.co.jp/img/description.png" />
+    <meta property="og:site_name" content="サイバーエデュケーションテクノロジーズ株式会社" />
     <meta property="og:locale" content="ja_JP" />
-
-    <link rel="icon" href="images/favicon.ico" sizes="any">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
-      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
-      crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              primary: "#0369a1",
-              secondary: "#00507F",
-              yellow: "#FDE047",
-              red: "#E11D48",
-              green: "#10B981",
-              blue: "#0090E5",
-              orange: "#E55500",
-            },
-            backgroundImage: {
-              main: "url('images/main.jpg')",
-            },
-          },
-        }
-      }
-    </script>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Noto+Sans+JP:wght@400;500;600;700&amp;display=swap"
+      rel="stylesheet" />
+    <link rel="stylesheet" href="lp.css?v=20260805-38" />
   </head>
 
-  <body class="text-slate-900">
-    <h1 class="hidden">近畿大学デザイン・クリエイティブ研究所 | KINDAI DESIGN CREATIVITY LAB</h1>
-    <div class="mainvisual">
-      <header class="flex items-center w-full h-12 sm:h-16 pr-6 gap-4 justify-between">
-        <div class="block h-12 sm:h-16">
-          <a href="index.html"><img class="w-auto h-12 sm:h-16" src="images/kindai_logo.png" alt=""></a>
-        </div>
+  <body>
+    <a class="skip-link" href="#main">本文へ移動</a>
 
-        <div class="nav-toggle">
-          <div class="openbtn1"><span></span><span></span><span></span></div>
-          <p>menu</p>
-        </div>
+    <header class="site-header" id="top">
+      <div class="header-inner">
+        <a class="brand" href="#top" aria-label="サイバーエデュケーションテクノロジーズ トップへ">
+          <img src="img/logo_b.svg" alt="CYBER EDUCATION TECHNOLOGIES" />
+        </a>
+        <button class="menu-button" type="button" aria-expanded="false" aria-controls="global-nav">
+          <span></span><span></span><span></span>
+          <span class="visually-hidden">メニューを開く</span>
+        </button>
+        <nav class="global-nav" id="global-nav" aria-label="メインナビゲーション">
+          <a href="#about">CYBER CAMPUSとは</a>
+          <a href="#gakulog">学ログ</a>
+          <a href="#features">機能</a>
+          <a href="#ai">AI</a>
+          <a href="#plan">料金</a>
+          <a href="#company">会社概要</a>
+          <a class="nav-cta" href="https://cybercampus.jp/" target="_blank" rel="noopener noreferrer">
+            お問い合わせ<span aria-hidden="true">↗</span>
+          </a>
+        </nav>
+      </div>
+    </header>
 
-        <nav id="nav">
-          <div id="nav-list">
-            <ul class="text-xl">
-              <!-- <li><img class="w-[280px] mx-auto" src="images/kindai_logo.png" alt=""></li> -->
-              <li><a href="index.html">TOP</a></li>
-              <li><a href="about.html">ABOUT<br><span class="text-xs text-white/50 font-normal">KINDAI DESIGN CREATIVITY
-                    LABとは</span></a></li>
-              <li><a href="researcher.html">RESEARCHER<br><span
-                    class="text-xs text-white/50 font-normal">研究者/教員</span></a></li>
-              <li><a href="contact.html" target="_blank">CONTACT<br><span
-                    class="text-xs text-white/50 font-normal">企業の方はこちら</span></a></li>
-
-              <li>
-                <div
-                  class="w-[280px] my-4 mx-auto border-2 border-primary rounded-lg justify-item-end text-sm text-white font-bold italic">
-                  <p class="py-2">Design Community<br>Coming soon...
-                  <p>
-                </div>
-                <!-- <div class="w-[280px] my-4 mx-auto border-2 border-primary rounded-lg justify-item-end text-sm text-primary font-bold italic">
-          <a href="https://pf.staging.kindai.design/" class="block" target="_blank"><i class="fa-solid fa-arrow-up-right-from-square mr-2"></i>Design Community</a></div> -->
-              </li>
+    <main id="main">
+      <section class="hero">
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="container hero-grid">
+          <div class="hero-copy reveal">
+            <p class="eyebrow"><span></span>EDUCATION ICT PLATFORM</p>
+            <h1>
+              学びをつなぐ<br />
+              <em>未来がひらく</em>
+            </h1>
+            <p class="hero-lead">
+              学校生活の情報も、日々の学びも、未来のキャリアも。<br class="pc-only" />
+              教育現場に関わるすべての人をひとつにつなぐ、学校ポータル。
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#about">CYBER CAMPUSを知る<span>→</span></a>
+              <a class="button button-ghost" href="#plan">サービス・料金を見る</a>
+            </div>
+            <ul class="hero-points" aria-label="CYBER CAMPUSの特徴">
+              <li><strong>2013</strong><span>年から提供</span></li>
+              <li><strong>24/365</strong><span>いつでも利用可能</span></li>
+              <li><strong>Multi</strong><span>すべての端末に対応</span></li>
             </ul>
           </div>
-        </nav>
-        <div class="circle-bg"></div>
-      </header>
-      <div class="arrow arrow--top">
-        <svg xmlns="http://www.w3.org/2000/svg" width="270.11" height="649.9" overflow="visible">
-          <style>
-            .geo-arrow {
-              fill: none;
-              stroke: #fff;
-              stroke-width: 2;
-              stroke-miterlimit: 10
-            }
-          </style>
-          <g class="item-to bounce-1">
-            <path class="geo-arrow draw-in" d="M135.06 142.564L267.995 275.5 135.06 408.434 2.125 275.499z" />
-          </g>
-          <circle class="geo-arrow item-to bounce-2" cx="194.65" cy="69.54" r="7.96" />
-          <circle class="geo-arrow draw-in" cx="194.65" cy="39.5" r="7.96" />
-          <circle class="geo-arrow item-to bounce-3" cx="194.65" cy="9.46" r="7.96" />
-          <g class="geo-arrow item-to bounce-2">
-            <path class="st0 draw-in" d="M181.21 619.5l13.27 27 13.27-27zM194.48 644.5v-552" />
-          </g>
-        </svg>
-      </div>
-      <div class="arrow arrow--bottom">
-        <svg xmlns="http://www.w3.org/2000/svg" width="31.35" height="649.9" overflow="visible">
-          <style>
-            .geo-arrow {
-              fill: none;
-              stroke: #fff;
-              stroke-width: 2;
-              stroke-miterlimit: 10;
-              z-index: 2;
-            }
-          </style>
-          <g class="item-to bounce-1">
-            <circle class="geo-arrow item-to bounce-3" cx="15.5" cy="580.36" r="7.96" />
-            <circle class="geo-arrow draw-in" cx="15.5" cy="610.4" r="7.96" />
-            <circle class="geo-arrow item-to bounce-2" cx="15.5" cy="640.44" r="7.96" />
-            <g class="item-to bounce-2">
-              <path class="geo-arrow draw-in" d="M28.94 30.4l-13.26-27-13.27 27zM15.68 5.4v552" />
-            </g>
-          </g>
-        </svg>
-      </div>
-      <div class="main -mt-12 sm:-mt-16">
-        <div class="main__text-wrapper">
-          <h1 class="main__title min-w-[320px] md:min-w-[calc(902/1440*100vw)]">
-            <div id="s1">
-              <svg class="h-[calc(176.549/1440*100vw)] mb-10 fill-white" id="_レイヤー_2" xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 374.52 93.22">
-                <defs></defs>
-                <g id="_レイヤー_1-2">
-                  <path class="cls-1"
-                    d="m64.06,51.65h-17.87c1.28,3.34,1.97,7.18,1.97,11.46,0,18.82-14.03,29.25-28.91,29.25H0v-58.16h18.64c10.69,0,20.18,4.62,25.4,13.17h20.01v4.28Zm-20.44,11.46c0-16.08-11.89-24.63-24.55-24.63H4.45v49.6h14.11c12.83,0,25.06-8.72,25.06-24.97Z" />
-                  <path class="cls-1"
-                    d="m92.71,76.88v-12.4h-25.74v23.6h30.28v4.28h-34.72v-58.16h33.95v4.28h-29.51v21.72h30.19v12.4h14.97v4.28h-19.41Z" />
-                  <path class="cls-1"
-                    d="m114.34,47.98c0,17.79,30.79,7.01,30.79,29.42,0,10.43-8.3,15.82-17.96,15.82-10.6,0-19.33-5.47-19.24-20.61h4.62c0,10.78,4.62,16.16,14.54,16.16,6.93,0,13.43-3.42,13.43-11.37,0-18.47-30.62-7.18-30.79-29.42-.09-9.49,7.78-14.62,17.02-14.62,8.55,0,14.97,3.68,16.85,11.97h18.39v4.28h-22.41c-.26-7.18-4.45-11.72-12.83-11.8-5.99-.09-12.4,3.25-12.4,10.18Z" />
-                  <path class="cls-1" d="m183.78,64.65h-19.33v27.71h-4.45v-58.16h4.45v26.17h19.33v4.28Z" />
-                  <path class="cls-1"
-                    d="m252.55,80.48h-20.01c-4.62,8.12-13,12.74-23.26,12.74-15.74,0-28.91-12.83-28.91-29.93s13.17-29.93,28.91-29.93c13.26,0,23.35,7.18,26.77,18.82h-4.96c-3.16-9.07-11.03-14.37-21.81-14.37-13.26,0-24.29,10.69-24.29,25.49s11.12,25.49,24.29,25.49c11.63,0,21.04-7.01,22.49-20.44h-23.52v-4.28h28.31c0,4.53-.68,8.55-2.05,12.14h18.05v4.28Z" />
-                  <path class="cls-1"
-                    d="m250.75,34.21h3.16l37.29,49.6v-49.6h4.45v58.16h-3.34l-37.12-49.18v49.18h-4.45v-58.16Z" />
-                  <path class="cls-1"
-                    d="m162.47,23.58c-6.5,0-11.79-5.29-11.79-11.79s5.29-11.79,11.79-11.79,11.79,5.29,11.79,11.79-5.29,11.79-11.79,11.79Zm0-19.65c-4.33,0-7.86,3.53-7.86,7.86s3.53,7.86,7.86,7.86,7.86-3.53,7.86-7.86-3.53-7.86-7.86-7.86Z" />
-                  <path class="cls-1"
-                    d="m362.72,72.06c-6.5,0-11.79-5.29-11.79-11.79s5.29-11.79,11.79-11.79,11.79,5.29,11.79,11.79-5.29,11.79-11.79,11.79Zm0-19.65c-4.33,0-7.86,3.53-7.86,7.86s3.53,7.86,7.86,7.86,7.86-3.53,7.86-7.86-3.53-7.86-7.86-7.86Z" />
-                </g>
-              </svg>
+          <div class="hero-visual reveal reveal-delay">
+            <div class="hero-label label-a"><span>●</span>お知らせを受信</div>
+            <div class="hero-label label-b"><span>♥</span>学びにリアクション</div>
+            <div class="product-stage">
+              <span class="product-badge"><img src="img/apple-touch-icon.png" alt="CYBER CAMPUS" /></span>
+              <img src="img/cc.png" alt="パソコンとスマートフォンで表示されたCYBER CAMPUSの画面" />
             </div>
-
-
-            <div id="s2">
-              <svg class="h-[calc(163.1094/1440*100vw)] mb-16 fill-white" id="_レイヤー_2"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 476.27 86.12">
-                <defs></defs>
-                <g id="_レイヤー_1-2">
-                  <path class="cls-1"
-                    d="m76.72,70.39h-22.15c-4.1,9.49-13.94,15.74-25.57,15.74-15.74,0-28.99-12.83-28.99-29.93s13.26-29.93,28.99-29.93c13.26,0,24.2,8.04,27.03,19.93h-4.87c-2.57-9.32-11.37-15.48-22.15-15.48-13.26,0-24.37,10.69-24.37,25.49s11.2,25.49,24.37,25.49c10.78,0,19.59-6.16,22.15-15.57h25.57v4.28Z" />
-                  <path class="cls-1"
-                    d="m97.32,62.26l2.31,3.85c5.82,9.67,11.8,14.88,17.79,14.88h2.91v4.28h-2.82c-7.53,0-14.03-4.28-20.87-15.82l-4.28-7.1h-12.23v22.92h-4.45V27.11h18.99c11.55,0,20.35,5.13,21.04,16.25h20.35v4.28h-20.53c-1.37,9.24-8.98,13.94-18.22,14.62Zm13.77-17.7c0-9.49-6.76-13.17-18.05-13.17h-12.91v26.68h13.51c10.26,0,17.45-3.76,17.45-13.51Z" />
-                  <path class="cls-1"
-                    d="m203.97,14.2v17.19h-4.45v-12.91h-30.36v12.91h-32.07v21.72h28.74v4.28h-28.74v23.61h30.28v4.28h-34.72V27.11h32.07v-12.91h39.26Z" />
-                  <path class="cls-1"
-                    d="m236.04,31.39h-30.36l21.98,53.88h-4.96l-6.67-16.76h-28.57l-6.59,16.76h-4.96l23.52-58.16h36.6v4.28Zm-21.72,32.84l-12.57-31.82-12.57,31.82h25.14Z" />
-                  <path class="cls-1"
-                    d="m290,71.58h-34.21v13.68h-4.45V31.39h-20.87v-4.28h46.27v4.28h-20.95v35.92h34.21v4.28Z" />
-                  <path class="cls-1" d="m289.06,27.11h4.45v58.16h-4.45V27.11Z" />
-                  <path class="cls-1"
-                    d="m351.92,31.39l-21.3,53.88h-4.53l-22.49-58.16h4.79l19.93,52.09,20.61-52.09h17.79l1.71,4.28h-16.51Z" />
-                  <path class="cls-1" d="m364.83,27.11h4.45v58.16h-4.45V27.11Z" />
-                  <path class="cls-1" d="m432.99,31.39h-29.16v53.88h-4.45V31.39h-20.87v-4.28h54.48v4.28Z" />
-                  <path class="cls-1"
-                    d="m476.27,27.11l-21.98,42.34c-6.33,12.14-13.94,15.82-20.87,15.82h-1.62v-4.28h1.71c5.39,0,11.97-3.42,17.79-14.88l.43-.77-21.81-38.23h5.3l18.9,33.53,16.93-33.53h5.22Z" />
-                  <path class="cls-1"
-                    d="m291.22,23.58c-6.5,0-11.79-5.29-11.79-11.79s5.29-11.79,11.79-11.79,11.79,5.29,11.79,11.79-5.29,11.79-11.79,11.79Zm0-19.65c-4.33,0-7.86,3.53-7.86,7.86s3.53,7.86,7.86,7.86,7.86-3.53,7.86-7.86-3.53-7.86-7.86-7.86Z" />
-                </g>
-              </svg>
-            </div>
-
-            <div id="s3"><svg class="h-[calc(110.1456/1440*100vw)] fill-white" id="_レイヤー_2"
-                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150.52 58.16">
-                <defs></defs>
-                <g id="_レイヤー_1-2">
-                  <path class="cls-1" d="m45.67,58.16H0V0h4.45v53.88h39.77l1.45,4.28Z" />
-                  <path class="cls-1"
-                    d="m115.54,0v4.28h-14.8v37.12h-15.14l6.84,16.76h-4.96l-6.67-16.76h-28.57l-6.59,16.76h-4.96L64.23,0h4.53l15.14,37.12h12.4V0h19.24Zm-49.01,5.3l-12.57,31.82h25.14l-12.57-31.82Z" />
-                  <path class="cls-1"
-                    d="m112.8,0h17.87c11.03,0,18.22,5.05,18.22,14.54s-7.78,12.74-10.86,13.43c3.51.68,12.49,3.85,12.49,14.2s-7.95,15.99-17.62,15.99h-20.1V0Zm17.1,26c6.07,0,14.45-2.4,14.45-11.12,0-6.76-4.96-10.6-13.94-10.6h-13.17v21.72h12.66Zm2.31,27.88c7.95,0,13.68-4.7,13.68-11.97,0-8.38-7.87-11.63-15.99-11.63h-12.66v23.6h14.97Z" />
-                </g>
-              </svg></div>
-
-            <!-- <div id="s1">DESIGN</div>
-     <div id="s2">CREATIVITY</div>
-     <div id="s3">LAB</div> -->
-          </h1>
-          <svg xmlns="http://www.w3.org/2000/svg" class="dotted-circle" width="352" height="352" overflow="visible">
-            <circle cx="176" cy="176" r="174" fill="none" stroke="#fff" stroke-width="2" stroke-miterlimit="10"
-              stroke-dasharray="12.921,11.9271" />
-          </svg>
-        </div>
-      </div>
-    </div>
-    <main class="relative bg-[#FAFAFA]">
-      <div class="anime_wrap w-full h-auto">
-        <!-- <a class="hover:opacity-50" href="news_protfes.html">
-          <img class="object-cover" src="images/protfes/banner.png" alt="">
-        </a> -->
-        <div class="w-full mx-auto aspect-video video">
-          <div class="overflow-hidden">
-            <video src="images/video/main.mp4" class="w-full h-full" autoplay muted loop controls></video>
           </div>
         </div>
-      </div>
+        <a class="scroll-guide" href="#philosophy"><span>SCROLL</span><i></i></a>
+      </section>
 
-      <!-- <div class="relative w-full md:w-11/12 lg:w-8/12 mx-auto py-12 md:py-24 px-3 md:px-0">
-        <h2 class="title tracking-wide">Protofes</h2>
-        <div class="w-full mx-auto pt-12 cursor-pointer">
-          <a class="hover:opacity-80" href="news_protfes_03.html">
-            <img class="object-cover" src="images/protofes_03/protfes_banner.jpg" alt="">
-          </a>
-        </div>
-      </div> -->
-
-
-      <div class="relative w-full md:w-11/12 lg:w-8/12 mx-auto py-12 md:py-24 px-3 md:px-0">
-        <h2 class="title tracking-wide">Protofes</h2>
-        <div class="w-full mx-auto pt-12 cursor-pointer">
-          <div class="w-full text-[40px] pb-10 mx-auto text-center">
-            <h3 class="sokuhou text-[#00A0E9]">速報！第４回プロト・フェス 開催決定！！</h3>
+      <section class="philosophy section" id="philosophy">
+        <div class="container philosophy-grid">
+          <div class="section-heading reveal">
+            <p class="section-kicker">OUR PHILOSOPHY</p>
+            <h2>私たちが<br /><span>「ICTでその先へ」</span><br />を創造するために</h2>
           </div>
-          <a class="hover:opacity-80" href="news_protfes_04.html">
-            <img class="object-cover" src="images/protofes_04/protfes_banner_pre.jpg" alt="">
-          </a>
+          <div class="philosophy-copy reveal">
+            <p class="lead-copy">
+              教育ICTは、単なるデジタル化ではありません。学生が自ら必要な情報を探し、理解し、活用する力を養い、学びをさらに深めるためのものです。
+            </p>
+            <p>
+              私たちは、学校ポータルと探究的な学びを中心に、教育機関へプラットフォームサービス「CYBER
+              CAMPUS」を提供しています。学生のモチベーション向上、個別学習への活用、教職員の業務効率化。そのすべての先にある、新しい教育のかたちを創ります。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="about section section-blue" id="about">
+        <div class="container">
+          <div class="section-title centered reveal">
+            <p class="section-kicker light">WHAT IS CYBER CAMPUS?</p>
+            <h2>教育現場のすべてを<br class="mobile-only" />ひとつにつなぐ</h2>
+            <p>
+              CYBER CAMPUSは、2013年にスタートした教育機関向け学校ポータル。<br class="pc-only" />
+              それぞれの学校専用の環境として、いつでも、どこでも利用できます。
+            </p>
+          </div>
+
+          <div class="stakeholder-map reveal">
+            <svg class="map-connections map-connections-desktop" viewBox="0 0 100 100" preserveAspectRatio="none"
+              aria-hidden="true">
+              <path class="network-orbit"
+                d="M8 11 C31 -3 69 -3 92 11 C104 28 104 56 92 73 C69 93 31 93 8 73 C-4 56 -4 28 8 11 Z" />
+              <path class="network-link" d="M8 11 C28 11 32 38 50 50" />
+              <path class="network-link" d="M8 73 C28 73 32 60 50 50" />
+              <path class="network-link" d="M92 11 C72 11 68 38 50 50" />
+              <path class="network-link" d="M92 73 C72 73 68 60 50 50" />
+              <circle cx="29" cy="24" r="0.7" />
+              <circle cx="31" cy="66" r="0.7" />
+              <circle cx="71" cy="24" r="0.7" />
+              <circle cx="69" cy="66" r="0.7" />
+            </svg>
+            <svg class="map-connections map-connections-mobile" viewBox="0 0 100 100" preserveAspectRatio="none"
+              aria-hidden="true">
+              <path class="network-link" d="M50 16 L50 80" />
+              <path class="network-link" d="M25 47 L75 47" />
+              <path class="network-link" d="M25 80 L75 80" />
+              <circle cx="50" cy="31.5" r="0.8" />
+              <circle cx="50" cy="47" r="1" />
+              <circle cx="50" cy="63.5" r="0.8" />
+              <circle cx="50" cy="80" r="1" />
+            </svg>
+            <div class="stakeholder student">
+              <span class="stakeholder-icon" aria-hidden="true">ST</span>
+              <strong>学生</strong>
+              <small>学び、気づき、つながる</small>
+            </div>
+            <div class="stakeholder teacher">
+              <span class="stakeholder-icon" aria-hidden="true">TC</span>
+              <strong>教職員</strong>
+              <small>届ける、見守る、育てる</small>
+            </div>
+            <div class="map-center">
+              <img src="img/ccl.svg" alt="CYBER CAMPUS" />
+              <small>CYBER CAMPUS</small>
+            </div>
+            <div class="stakeholder staff">
+              <span class="stakeholder-icon" aria-hidden="true">OF</span>
+              <strong>職員</strong>
+              <small>運営をもっとスムーズに</small>
+            </div>
+            <div class="stakeholder parent">
+              <span class="stakeholder-icon" aria-hidden="true">PA</span>
+              <strong>保護者</strong>
+              <small>学校生活を身近に</small>
+            </div>
+          </div>
+
+          <div class="about-copy reveal">
+            <h3>DXの本質は、<br />誰もが役割を最大限に発揮できる環境づくり。</h3>
+            <p>
+              先生からのお知らせ、メッセージ、ファイル配布をはじめ、学びの記録や保護者との連絡まで。学校内外を問わず利用でき、iOS・Androidの専用アプリにも対応しています。
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="gakulog section" id="gakulog">
+        <div class="container gakulog-intro">
+          <div class="gakulog-copy reveal">
+            <p class="section-kicker">LEARNING LOG</p>
+            <h2>その学びが<br /><span>未来の自分を<br />つくる</span></h2>
+            <p class="lead-copy">
+              従来のeポートフォリオから、未来につながるeポートフォリオへ。
+            </p>
+            <p>
+              「学ログ」は、学生が学校生活での学びや気づきをSNS感覚で投稿し、教職員や仲間と共有できる仕組みです。日々の小さな発見も、積み重なれば自分だけの大切な資産になります。
+            </p>
+          </div>
+          <div class="gakulog-visual reveal reveal-delay">
+            <span class="visual-caption">学ログを、いつでもどこでも。</span>
+            <img src="img/gakulog.png" alt="パソコンとスマートフォンで表示された学ログ・ガクチカの画面" />
+          </div>
         </div>
 
-        <hr class="border border-slate-200 border-dashed my-12">
-
-        <div>
-          <iframe class="w-full mx-auto aspect-video video" width="auto" height="auto"
-            src="https://www.youtube.com/embed/LBQ8N-4d3TI?si=IGQK_1jpE8tnddDM" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <div class="container learning-cycle reveal">
+          <article>
+            <span class="cycle-number">01</span>
+            <div class="cycle-icon">✎</div>
+            <h3>発信する</h3>
+            <p>学んだこと、気づいたことを、形式にとらわれず気軽に投稿。</p>
+          </article>
+          <i class="cycle-arrow">→</i>
+          <article>
+            <span class="cycle-number">02</span>
+            <div class="cycle-icon">♡</div>
+            <h3>つながる</h3>
+            <p>学生や教員からの「いいね」やコメントが、次の学びを後押し。</p>
+          </article>
+          <i class="cycle-arrow">→</i>
+          <article>
+            <span class="cycle-number">03</span>
+            <div class="cycle-icon">↗</div>
+            <h3>未来へ活かす</h3>
+            <p>力を入れた活動を「ガクチカ」にまとめ、進学・就職のアピールへ。</p>
+          </article>
         </div>
 
-        <hr class="border border-slate-200 border-dashed mt-12">
-
-        <div class="w-full mx-auto pt-12 cursor-pointer">
-          <a class="hover:opacity-80" href="news_protfes_03.html">
-            <img class="object-cover" src="images/protofes_03/protfes_banner_finished.jpg" alt="">
-          </a>
+        <div class="container abilities">
+          <div class="abilities-title reveal">
+            <p class="section-kicker">THREE ELEMENTS</p>
+            <h2><span class="heading-line">「学力の3要素」を</span><br />日々の学びから育む</h2>
+          </div>
+          <div class="ability-cards">
+            <article class="ability-card ability-1 reveal">
+              <span>01</span>
+              <h3>知識・技能</h3>
+              <p>基礎的・基本的な知識と技能の習得</p>
+            </article>
+            <article class="ability-card ability-2 reveal">
+              <span>02</span>
+              <h3>思考力・判断力・表現力</h3>
+              <p>課題を発見し、探究し、解決へ導く力</p>
+            </article>
+            <article class="ability-card ability-3 reveal">
+              <span>03</span>
+              <h3>主体性・多様性・協働性</h3>
+              <p>多様な人と協働し、主体的に学ぶ態度</p>
+            </article>
+          </div>
         </div>
+      </section>
 
-        <hr class="border border-slate-200 border-dashed mt-12">
-
-        <div class="w-full mx-auto pt-12">
-          <a class="hover:opacity-80" href="news_protfes_02.html">
-            <img class="object-cover" src="images/protofes_02/banner_finished.png" alt="">
-          </a>
+      <section class="future section">
+        <div class="container">
+          <div class="section-title centered reveal">
+            <p class="section-kicker">FROM RECORD TO FUTURE</p>
+            <h2>「記録する」から<br class="mobile-only" />「未来につなげる」へ</h2>
+          </div>
+          <div class="portfolio-compare reveal">
+            <div class="portfolio-side conventional">
+              <span class="compare-label">これまでのeポートフォリオ</span>
+              <h3>学習成果を<br />蓄積・管理する</h3>
+              <ul>
+                <li>学習プロセスの可視化</li>
+                <li>主体的な学びの促進</li>
+                <li>個別最適化された指導</li>
+                <li>成果の蓄積と共有</li>
+              </ul>
+              <p class="compare-issue">入力の手間や、メリットの見えにくさが課題に。</p>
+            </div>
+            <div class="compare-arrow"><span>UPDATE</span>→</div>
+            <div class="portfolio-side next">
+              <span class="compare-label">未来につながるeポートフォリオ</span>
+              <h3>つながりを生み、<br /><em>次の一歩へ活かす</em></h3>
+              <ul>
+                <li>自己の考えをレベルアップ</li>
+                <li>開かれた意見交換で成長</li>
+                <li>就職につながるアプローチ</li>
+                <li>新しい仲間との出会い</li>
+              </ul>
+              <p class="future-tags"># 簡単　# つながる　# 楽しい　# 企業とつながる</p>
+            </div>
+          </div>
         </div>
+      </section>
 
-      </div>
+      <section class="features section" id="features">
+        <div class="container">
+          <div class="section-title centered reveal">
+            <p class="section-kicker">FEATURES</p>
+            <h2>毎日使うものだから<br />シンプルに心地よく</h2>
+            <p>必要な情報へ迷わずアクセス。学校ごとの運用に合わせた設定も可能です。</p>
+          </div>
 
-      <!-- Archives -->
-      <div class="news w-full md:w-11/12 lg:w-8/12 mx-auto py-12 md:py-24 pb-32 px-3 md:px-0">
-        <h2 class="title tracking-wide">Archives</h2>
-        <div class="w-full py-8 mx-auto">
-          <iframe class="w-full mx-auto aspect-video video" width="auto" height="auto"
-            src="https://www.youtube.com/embed/kGDa0K3OBW4?si=g2yOtSeiLgFmZFnQ" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          <div class="feature-showcase">
+            <article class="feature-large reveal">
+              <div class="feature-copy">
+                <span class="feature-no">01</span>
+                <h3>シンプルなホーム画面</h3>
+                <p>お知らせ、メッセージ、学ログ、ガクチカへスムーズにアクセス。更新情報はリアルタイムに反映されます。</p>
+              </div>
+              <div class="feature-image">
+                <img src="img/cc.png" alt="CYBER CAMPUSのホーム画面イメージ" />
+              </div>
+            </article>
+            <article class="feature-small feature-notice reveal">
+              <span class="feature-no">02</span>
+              <div class="mini-ui" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </div>
+              <h3>お知らせの配信</h3>
+              <p>詳細な宛先設定、予約配信、ファイル添付、重要表示に対応。</p>
+            </article>
+            <article class="feature-small feature-message reveal">
+              <span class="feature-no">03</span>
+              <div class="chat-ui" aria-hidden="true"><i></i><i></i><i></i></div>
+              <h3>メッセージでのやり取り</h3>
+              <p>1対1の連絡も一斉送信も。既読・未読をリアルタイムに確認。</p>
+            </article>
+            <article class="feature-wide feature-devices reveal">
+              <div>
+                <span class="feature-no">04</span>
+                <h3>快適なマルチデバイス対応</h3>
+                <p>パソコン、スマートフォン、タブレットで同じ機能を利用可能。24時間365日、学校内外からアクセスできます。</p>
+              </div>
+              <div class="device-icons" aria-hidden="true"><span>PC</span><span>TB</span><span>SP</span></div>
+            </article>
+            <article class="feature-wide support reveal">
+              <div>
+                <span class="feature-no">05</span>
+                <h3>安心のカスタマーサポート</h3>
+                <p>専用サポートデスクが利用者を支援。毎年の年次更新もしっかりサポートします。</p>
+              </div>
+              <div class="support-markbox">
+                <div class="support-mark" aria-hidden="true">?</div>
+              </div>
+            </article>
+          </div>
+
+          <div class="functions-block">
+            <div class="functions-heading reveal">
+              <p class="section-kicker">BASIC FUNCTIONS</p>
+              <h2>必要な機能を選んで<br />学校にぴったりの環境へ</h2>
+            </div>
+            <div class="function-grid">
+              <article class="function-card reveal"><span>01</span><b>NEWS</b>
+                <h3>お知らせ配信</h3>
+                <p>学生・教職員・保護者へ、重要なお知らせを確実に配信。</p>
+              </article>
+              <article class="function-card reveal"><span>02</span><b>BELL</b>
+                <h3>通知</h3>
+                <p>メール・PUSH通知をカテゴリごとに利用者が設定可能。</p>
+              </article>
+              <article class="function-card reveal"><span>03</span><b>CHAT</b>
+                <h3>メッセージ</h3>
+                <p>学校に関わる人同士で安全にコミュニケーション。</p>
+              </article>
+              <article class="function-card reveal"><span>04</span><b>ABSENCE</b>
+                <h3>欠席連絡</h3>
+                <p>保護者から24時間365日、学校へ欠席を連絡。</p>
+              </article>
+              <article class="function-card highlight reveal"><span>05</span><b>LOG</b>
+                <h3>学ログ</h3>
+                <p>探究的な学びを投稿・共有し、日々の成長を資産に。</p>
+              </article>
+              <article class="function-card reveal"><span>06</span><b>ID</b>
+                <h3>デジタル学生証</h3>
+                <p>QRコードに対応したデジタル学生証を利用可能。</p>
+              </article>
+              <article class="function-card reveal"><span>07</span><b>LIBRARY</b>
+                <h3>ライブラリ</h3>
+                <p>お知らせの添付ファイルをまとめて集約・表示。</p>
+              </article>
+              <article class="function-card reveal"><span>08</span><b>PAY</b>
+                <h3>学費納入</h3>
+                <p>学費の支払いと納入状況をオンラインで確認。</p>
+              </article>
+              <article class="function-card reveal"><span>09</span><b>SHOP</b>
+                <h3>学校用品の購入</h3>
+                <p>各種用品の購入から支払い、受け取り方法の選択まで。</p>
+              </article>
+            </div>
+            <p class="function-note reveal">ブラウザ版と同じ機能を、iOS・iPadOS・Androidアプリでも。PWAによるMac・Windows・Chrome
+              PCのアプリ利用にも対応します。</p>
+          </div>
         </div>
-        <div class="w-full text-sm px-4">
-          <h3 class="text-center text-lg font-semibold pb-6">デザイン・クリエイティブ研究所主催　特別トークセッション<br>
-            キャリアの軌跡　～つながりが自身をアップデートする～</h3>
-          <p class="pb-4">NVIDIA日本代表兼米国本社副社長・大崎真孝氏（本学理工学部原子炉工学科卒）<br>
-            ATカーニー会長　CIC Japan会長　梅澤高明氏（本学客員教授）<br>
+      </section>
 
-            2024年7月4日（木）本学東大阪キャンパスにて開催した様子を記録、編集したアーカイブ動画です。</p>
-
-          <p>大崎氏は本学理工学部のOBであり、半導体メーカー・NVIDIAを率いる経営トップでいらっしゃいます。<br>
-            梅澤氏は経営コンサルタントのプロフェッショナルで、日米オフィスで25年間、戦略・イノベーション・都市開発関連のコンサルティングの経験を経て観光と文化とまちづくりを繋ぐ活動に注力されており、令和４年に本学客員教授に就任されました。
+      <section class="ai-section section" id="ai">
+        <div class="ai-glow"></div>
+        <div class="container ai-intro">
+          <div class="ai-heading reveal">
+            <p class="section-kicker light">CYBER CAMPUS AI</p>
+            <h2>一人ひとりの選択に<br /><em>AIという伴走者を</em></h2>
+          </div>
+          <p class="reveal">
+            学校のデータと、学生が積み重ねた学びを活用。履修から学校生活、キャリアまで、学生の自律的な学びと教育の質を支えます。
           </p>
         </div>
+        <div class="container ai-cards">
+          <article class="ai-card reveal">
+            <div class="ai-visual"><img src="img/ai-01.png" alt="履修科目と学習ルートをつなぐAIのイメージ" /></div>
+            <h3>履修相談アドバイザー</h3>
+            <p>シラバスを活用したAI履修相談で、大学・附属高校での主体的な科目選択をサポート。</p>
+          </article>
+          <article class="ai-card reveal">
+            <div class="ai-visual"><img src="img/ai-02.png" alt="学校生活の情報を集約するAIアドバイザーのイメージ" /></div>
+            <h3>キャンパスライフアドバイザー</h3>
+            <p>学校から提供されるデータをもとに質問へ回答し、日々の学校生活を支えます。</p>
+          </article>
+          <article class="ai-card reveal">
+            <div class="ai-visual"><img src="img/ai-03.png" alt="学びの記録を未来の進路へつなぐAIのイメージ" /></div>
+            <h3>キャリアアドバイザー</h3>
+            <p>学校データと学ログの記録を活用し、学生一人ひとりの進学・就職をサポート。</p>
+          </article>
+        </div>
+      </section>
 
-        <hr class="border border-slate-200 border-dashed my-12">
-
-        <div class="w-full mx-auto">
-          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 pb-8">
-            <figure
-              class="group overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 shadow-[0_12px_32px_rgba(15,23,42,0.06)]">
-              <img class="aspect-[4/3] w-full object-cover" src="images/archives_02/img_01.jpg" alt="令和7年度活動報告会の様子 1">
-            </figure>
-            <figure
-              class="group overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 shadow-[0_12px_32px_rgba(15,23,42,0.06)]">
-              <img class="aspect-[4/3] w-full object-cover" src="images/archives_02/img_02.jpg" alt="令和7年度活動報告会の様子 2">
-            </figure>
-            <figure
-              class="group overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 shadow-[0_12px_32px_rgba(15,23,42,0.06)]">
-              <img class="aspect-[4/3] w-full object-cover" src="images/archives_02/img_03.jpg" alt="令和7年度活動報告会の様子 3">
-            </figure>
+      <section class="payment section">
+        <div class="container payment-grid">
+          <div class="payment-copy reveal">
+            <p class="section-kicker">SMART PAYMENT</p>
+            <h2>学費の支払いも<br />学校の入金管理も<br /><span>スマートに</span></h2>
+            <p>入金者の特定と消込業務を効率化し、事務コストを軽減。未入金先の早期把握にもつながります。</p>
+            <ul class="payment-merits">
+              <li>入金照合事務を効率化</li>
+              <li>消込率の向上・早期化</li>
+              <li>誤入金の削減をサポート</li>
+            </ul>
           </div>
-          <h3 class="text-center text-lg font-semibold pb-6">デザイン・クリエイティブ研究所　令和7年度活動報告会<br>
-            プロジェクトの成果と課題について</h3>
-          <p>当研究所発足時から活動している以下3つのプロジェクトについて、
-            それぞれプロジェクトを統括している教員より活動報告を実施（2026/3/31）しました。</p>
-          <p>
-            ・<a class="text-primary hover:underline"
-              href="images/archives_02/kindai-hospital-project.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
-              target="_blank" rel="noopener noreferrer">近大病院小児病棟プロジェクト</a>（<a class="text-primary"
-              href="researcher_detail_06.html">岡本
-              清文</a>　近畿大学名誉教授、元文芸学部教授、当研究所顧問）<br>
-            ・<a class="text-primary hover:underline"
-              href="images/archives_02/multi-sensory-dining.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH"
-              target="_blank" rel="noopener noreferrer">Multi-Sensory Dining</a>（<a class="text-primary"
-              href="researcher_detail_01.html">後藤
-              哲也</a>　文芸学部教授）<br>
-            ・<a class="text-primary hover:underline"
-              href="images/archives_02/protofes-2025-03.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" target="_blank"
-              rel="noopener noreferrer">2025年第3回プロト・フェス</a>（<a class="text-primary" href="researcher_detail_11.html">廣田
-              章光</a>　近畿大学名誉教授、元経営学部教授、当研究所顧問）</p>
-        </div>
-        <!-- <hr class="border border-slate-200 border-dashed mt-12"> -->
-      </div>
-      <!-- news -->
-
-      <div class="w-full md:w-11/12 lg:w-8/12 mx-auto text-center px-4">
-        <h4><a class="text-slate-800 font-bold hover:opacity-80"
-            href="https://www.city.higashiosaka.lg.jp/0000024727.html" target="_blank">東大阪フォントについて<br>
-            <span
-              class="text-primary font-light break-words">https://www.city.higashiosaka.lg.jp/0000024727.html</span></a>
-        </h4>
-      </div>
-
-      <!-- topics -->
-      <div class="keywords relative">
-        <div class="w-full mx-auto py-12 md:py-24 overflow-hidden">
-          <h2 class="title tracking-wider">Topics</h2>
-          <swiper-container init="false" class="swiper mySwiper w-full px-3 sm:px-6 pt-10" slides-per-view="3.25"
-            pagination='false' navigation="true" space-between="16" centered-slides="false" initial-slide="0">
-            <swiper-slide class="w-full">
-              <a href="news_topics_13.html">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-contain" src="images/topics_13/topic_01.png" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">
-                  若井ホールディングス様とコラボ　「ラクピン」を活用した壁面デザインワークショップを開催</p><span class="text-xs text-slate-500">2026.7.10</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="news_topics_12.html">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-contain" src="images/topics_12.png" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">
-                  近畿大学発スタートアップ3社が大阪商工会議所主催「DDフェス2025」に出展</p><span class="text-xs text-slate-500">2026.2.24</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="https://newscast.jp/news/3501634" target="_blank">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-contain" src="images/topics_11.jpg" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">
-                  SUPER EIGHT 村上信五氏が大学で初講義！ 「芸能活動を超えて広がる、セルフプロデュースとビジネスデザイン」</p><span
-                  class="text-xs text-slate-500">2025.12.11</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="https://newscast.jp/news/5491091" target="_blank">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-cover" src="images/topics_10.png" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">
-                  新しい近畿大学病院でワークショップ「絵でつながろう」を開催 小児患者と地域の子どもたちが小児科病棟の壁画を制作</p><span
-                  class="text-xs text-slate-500">2025.09.19</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="https://newscast.jp/news/4005838" target="_blank">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-cover" src="images/topics_09.png" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">
-                  近畿大学デザイン・クリエイティブ研究所「第3回プロト・フェス」埋もれたアイデアを新たな視点で再評価し、新しい価値を創出</p><span
-                  class="text-xs text-slate-500">2025.09.19</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="news_topics_08.html">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-cover" src="images/topics_08/topic_01.jpg" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">
-                  2025年度 デザイン・クリエイティブ研究所 デザインマネジメントセンター研究会を開催</p><span class="text-xs text-slate-500">2025.8.27</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="https://newscast.jp/news/1034455" target="_blank">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-cover" src="images/topics_07/topic_01.png" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">
-                  アートの力で子どもたちの病気療養を支援 新しい近畿大学病院の小児科を彩る「フェンスの森」を共同制作</p><span
-                  class="text-xs text-slate-500">2025.06.24</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="news_topics_06.html">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-cover" src="images/topics_06/topic_02.jpg" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">
-                  デザイン・クリエイティブ研究所デザイン・マネジメントセンター＆経営学部デザイン研究会合同シンポジウム 開催</p><span
-                  class="text-xs text-slate-500">2025.03.21</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="news_protfes_02.html#trophy">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-cover" src="images/protofes_02/trophy/trophy_1.jpg" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">第2回プロト・フェス<br>アワード受賞者へトロフィーを授与</p>
-                <span class="text-xs text-slate-500">2025.02.27</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="news_topics_05.html">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-cover" src="images/topics_05/topic_03.jpg" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">令和6年度研究所の活動報告会を実施しました</p><span
-                  class="text-xs text-slate-500">2025.02.20</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="news_topics_04.html">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-cover" src="images/topics_04/topic_01.jpg" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">第2回フライオン プロト・フェスを開催</p><span
-                  class="text-xs text-slate-500">2025.01.31</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="news_topics_03.html">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100 overflow-hidden">
-                  <img class="hover:opacity-70 h-full object-cover" src="images/topics_03/topic_01.jpg" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">文芸学部×理工学部 協働プロジェクト「SUIM」</p><span
-                  class="text-xs text-slate-500">2024.06.13</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="news_topics_02.html">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100">
-                  <img class="hover:opacity-70 h-full object-contain" src="images/topic_03.jpg" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">長瀬駅前商店街のアーチをデザイン</p><span
-                  class="text-xs text-slate-500">2024.04.02</span>
-              </a>
-            </swiper-slide>
-            <swiper-slide class="w-full">
-              <a href="news_topics.html">
-                <div class="w-full aspect-[3/2] rounded-md bg-white border border-slate-100">
-                  <img class="hover:opacity-70 w-full h-full rounded-md object-cover" src="images/topic_01.jpg" alt="">
-                </div>
-                <p class="text-sm md:text-[17px] leading-[1.65] mt-4 line-clamp-2">第3回 研究講演会を開催しました</p><span
-                  class="text-xs text-slate-500">2024.02.02</span>
-              </a>
-            </swiper-slide>
-          </swiper-container>
-        </div>
-      </div>
-
-      <!-- <div class="w-full mx-auto aspect-video video">
-        <div class="overflow-hidden">
-          <video src="images/video/main.mp4" class="w-full h-full" autoplay muted loop controls></video>
-        </div>
-      </div> -->
-
-      <div class="keywords relative overflow-x-hidden">
-        <div class="w-full md:w-11/12 lg:w-8/12 mx-auto py-12 md:py-24">
-          <h2 class="title tracking-wider">Keywords</h2>
-
-          <div class="flex flex-wrap gap-6 pt-14 text-base sm:text-lg font-bold pb-4 px-3 lg:px-0 tracking-wide">
-            <p
-              class="card2 p-3 sm:p-4 rounded-md !text-white bg-gradient-to-r from-sky-700 to-sky-400 text-transparent hover:opacity-80">
-              <a class="block cursor-pointer" href="researcher_result_01.html"># デザイン思考</a>
-            </p>
-            <p
-              class="card2 p-3 sm:p-4 rounded-md !text-white bg-gradient-to-r from-sky-700 to-sky-400 text-transparent hover:opacity-80">
-              <a class="block cursor-pointer" href="researcher_result_02.html"># デザインコンサルティング</a>
-            </p>
-            <p
-              class="card2 p-3 sm:p-4 rounded-md !text-white bg-gradient-to-r from-sky-700 to-sky-400 text-transparent hover:opacity-80">
-              <a class="block cursor-pointer" href="researcher_result_03.html"># 観光</a>
-            </p>
-            <p
-              class="card2 p-3 sm:p-4 rounded-md !text-white bg-gradient-to-r from-sky-700 to-sky-400 text-transparent hover:opacity-80">
-              <a class="block cursor-pointer" href="researcher_result_04.html"># サービスデザイン</a>
-            </p>
-            <p
-              class="card2 p-3 sm:p-4 rounded-md !text-white bg-gradient-to-r from-sky-700 to-sky-400 text-transparent hover:opacity-80">
-              <a class="block cursor-pointer" href="researcher_result_05.html"># 感性学</a>
-            </p>
+          <div class="payment-methods reveal">
+            <article><span>01</span>
+              <div>
+                <h3>専用口座への銀行振込</h3>
+                <p>取引先ごとの専用口座で、入金をすばやく特定。</p>
+              </div>
+            </article>
+            <article><span>02</span>
+              <div>
+                <h3>Pay-easy</h3>
+                <p>ネットバンキングやATMから24時間365日支払い可能。</p>
+              </div>
+            </article>
+            <article><span>03</span>
+              <div>
+                <h3>クレジットカード</h3>
+                <p>利用者の都合に合わせた多様な支払い方法に対応。</p>
+              </div>
+            </article>
           </div>
+        </div>
+      </section>
 
+      <section class="merits section">
+        <div class="container">
+          <div class="section-title centered reveal">
+            <p class="section-kicker light">WHY CYBER CAMPUS?</p>
+            <h2>導入も運用も無理なく</h2>
+          </div>
+          <div class="merit-grid reveal">
+            <article><span>01</span>
+              <h3>最速で導入</h3>
+              <p>クラウドサービスだから、スムーズに利用開始。</p>
+            </article>
+            <article><span>02</span>
+              <h3>継続アップデート</h3>
+              <p>サービスの進化を追加開発なしで活用。</p>
+            </article>
+            <article><span>03</span>
+              <h3>導入費用を抑制</h3>
+              <p>必要な機能を選び、無駄のない導入へ。</p>
+            </article>
+            <article><span>04</span>
+              <h3>インフラ不要</h3>
+              <p>学校側でサーバーを用意する必要なし。</p>
+            </article>
+            <article><span>05</span>
+              <h3>保守体制もおまかせ</h3>
+              <p>専任の保守体制を構築する負担を軽減。</p>
+            </article>
+          </div>
+        </div>
+      </section>
 
-          <div class="w-full mt-4 mx-auto px-3 lg:px-0">
-            <!-- <input type="text" autocomplete="off" name="text" class="input w-full placeholder:font-bold" placeholder="キーワードを入力...
-            "> -->
-            <div class="text-[15px] grid grid-cols-2 md:grid-cols-3 gap-2 sm:gap-4 text-white pt-0 pb-4">
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_10.html"># eコマース</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_11.html"># インタラクション・デザイン</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_06.html"># インテリアデザイン</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_01.html"># ヴィジュアルコミュニケーション</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_01.html"># グラフィックデザイン</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_10.html"># デジタルマーケティング</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_13.html"># データ</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_04.html"># 企業分析</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_13.html"># 実証分析</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_09.html"># デザイン経営</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_09.html"># 価値循環</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_08.html"># 電子商取引</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_08.html"># Webサービス</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_05.html"># アート思考</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_04.html"># 知的資産経営</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_09.html"># 経営学史</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_05.html"># 意味のイノベーション</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_11.html"># マーケティング論</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_08.html"># ブロックチェーン</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_04.html"># イノベーション</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_03.html"># チームワーク</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_10.html"># リユース</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_07.html"># プロダクトデザイン</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_04.html"># 組織関連携</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_04.html"># 価値共創マーケティング</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_06.html"># 環境デザイン</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_03.html"># システムデザイン</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_02.html"># 健康</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_06.html"># 建築設計</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_13.html"># IT</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_02.html"># 自然言語処理</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_12.html"># 写真映像論</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_03.html"># コミュニケーション</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_11.html"># 製品イノベーション論</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_15.html"># メディアアート</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_15.html"># バイオアート</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_15.html"># スペースアート</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_15.html"># 宇宙</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_16.html"># e-Learning</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_16.html"># 人工知能</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_16.html"># マルチメディア技術</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_16.html"># コンピュータビジョン</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_17.html"># 高エネルギー宇宙物理学</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_17.html"># 天文学</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_17.html"># 物理学</a></p>
-              <p class="card2 py-1 px-2 rounded-md w-full text-sky-700 hover:opacity-70"><a class="block cursor-pointer"
-                  href="researcher_detail_17.html"># 宇宙物理学</a></p>
+      <section class="plans section" id="plan">
+        <div class="container">
+          <div class="section-title centered reveal">
+            <p class="section-kicker">SERVICE LINEUP</p>
+            <h2>目的に合わせて選べる<br />サービスラインナップ</h2>
+            <p>記載価格は1アカウントあたりの年額・税込です。</p>
+          </div>
+          <div class="plan-grid">
+            <article class="plan-card reveal">
+              <span class="plan-label">LIGHT</span>
+              <h3>CYBER CAMPUS ONE</h3>
+              <p class="price price-text"><strong>無料</strong><span>または</span><strong>3,300</strong>円〜</p>
+              <p class="plan-description">必要な機能から小さく始めたい学校へ。</p>
+            </article>
+            <article class="plan-card reveal">
+              <span class="plan-label">LEARNING</span>
+              <h3>CYBER CAMPUS 学ログ</h3>
+              <p class="price"><strong>3,300</strong>円<span>/ 年</span></p>
+              <p class="plan-description">探究的な学びの投稿・共有とガクチカ活用に。</p>
+            </article>
+            <article class="plan-card reveal">
+              <span class="plan-label">STANDARD</span>
+              <h3>CYBER CAMPUS</h3>
+              <p class="price"><strong>5,500</strong>円<span>/ 年</span></p>
+              <p class="plan-description">学校ポータルの基本機能を幅広く活用。</p>
+            </article>
+            <article class="plan-card reveal">
+              <span class="plan-label">ENTERPRISE</span>
+              <h3>CYBER CAMPUS<br />ENTERPRISE</h3>
+              <p class="price"><strong>12,000</strong>円<span>/ 年</span></p>
+              <p class="plan-description">すべての機能を活用し、学校に最適化したサポートを提供。</p>
+              <small>※学生数10,000以上はボリュームに応じてご相談</small>
+            </article>
+            <article class="plan-card plan-ai reveal">
+              <div class="plan-ai-title">
+                <span class="plan-label">AI</span>
+                <h3>CYBER CAMPUS AI</h3>
+              </div>
+              <div class="plan-ai-price">
+                <p class="price"><strong>1,650</strong>円<span>/ 年</span></p>
+                <small>※AI以外の機能を利用する場合は年3,300円〜</small>
+              </div>
+              <ul>
+                <li>履修相談アドバイザー</li>
+                <li>キャンパスライフアドバイザー</li>
+                <li>キャリアアドバイザー</li>
+              </ul>
+            </article>
+          </div>
+          <div class="custom-plans reveal">
+            <article><span>OPTION 01</span>
+              <div>
+                <h3>ポラリスAI</h3>
+                <p>シラバスを活用したAI履修相談・学校生活支援。コンサルティング付きで個別にお見積りします。</p>
+              </div>
+            </article>
+            <article><span>OPTION 02</span>
+              <div>
+                <h3>CCX パートナーシップ</h3>
+                <p>CYBER CAMPUSをベースに完全カスタマイズ。学校と協議のうえ、最適なサービスを構築します。</p>
+              </div>
+            </article>
+          </div>
+          <p class="plan-note">※サービス内容・価格は導入規模やご利用機能により異なる場合があります。詳細はお問い合わせください。</p>
+        </div>
+      </section>
+
+      <section class="cta-section">
+        <div class="container cta-inner reveal">
+          <p class="section-kicker light">LET'S CREATE THE NEXT</p>
+          <h2>ICTでその先へ</h2>
+          <p>学校の課題や実現したいことを、まずはお聞かせください。</p>
+          <a class="button button-white" href="https://cybercampus.jp/" target="_blank" rel="noopener noreferrer">CYBER
+            CAMPUSに関するお問い合わせ<span>↗</span></a>
+        </div>
+      </section>
+
+      <section class="company section" id="company">
+        <div class="container company-grid">
+          <div class="company-heading reveal">
+            <p class="section-kicker">COMPANY</p>
+            <h2>会社概要</h2>
+            <div class="company-visual">
+              <img class="company-visual-logo" src="img/logo_b.svg" alt="CYBER EDUCATION TECHNOLOGIES" />
             </div>
           </div>
-        </div>
-        <div class="hidden md:block absolute w-[25%] -top-0 md:-top-[20%] -right-[12%]">
-          <img class="w-full" src="images/item2.svg" alt="">
-        </div>
-      </div><!-- keyword -->
-
-
-      <div class="project pb-12 md:pb-24 relative overflow-x-hidden">
-        <!-- <div class="absolute w-[25%] top-[80%] -left-[12%]">
-          <img class="w-full" src="images/item1.svg" alt="">
-        </div> -->
-        <h2 class="title tracking-wide">Features</h2>
-
-        <div
-          class="flex flex-col md:flex-none lg:grid grid-cols-2 xl:grid-cols-3 mx-auto px-3 md:px-6 py-8 md:py-[50px] gap-4 md:gap-6 sm:gap-8">
-
-          <div class="card w-full mx-auto p-4 sm:p-5 rounded-lg z-40">
-            <a href="researcher_detail_13.html">
-              <div class="flex gap-4">
-                <div class="w-1/3">
-                  <div class="w-full aspect-square rounded-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="images/icon_13.jpg" alt="">
-                  </div>
-                </div>
-                <div class="w-2/3">
-                  <h3 class="text-base md:text-lg font-bold leading-6">デザインマネジメントセンター<br>布施 匡章</h3>
-                  <div class="flex gap-2 text-center text-white text-[10px] md:text-xs my-2 flex-wrap">
-                    <p class="px-2 lg:px-3 py-0.5 bg-primary rounded-full">#サービスデザイン</p>
-                    <p class="px-2 lg:px-3 py-0.5 bg-primary rounded-full">#IT</p>
-                    <p class="px-2 lg:px-3 py-0.5 bg-primary rounded-full">#データ</p>
-                    <p class="px-2 lg:px-3 py-0.5 bg-primary rounded-full">#実証分析</p>
-                  </div>
-                  <p class="md:pt-2 text-sm line-clamp-3 leading-relaxed">大阪大学大学院 経済学研究科
-                    博士後期課程修了。博士（経済学）。関西情報センター研究員として、関西企業・自治体の情報化推進と課題を調査する「e-Kansaiレポート」を企画・担当。同セン主催のサービスデザインセミナー講師。その他内閣府等各種委託調査を手がける。2013年より近畿大学
-                    経営学部 准教授。2019年より現職。近畿大学研究クラスター「幸福度に関する研究」代表。近畿大学課題解決型ビジネスプランコンテスト主催。</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="card w-full mx-auto flex gap-4 p-4 sm:p-5 rounded-md z-40">
-            <a href="researcher_detail_01.html">
-              <div class="flex gap-4">
-                <div class="w-1/3">
-                  <div class="w-full aspect-square rounded-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="images/icon_1.jpg" alt="">
-                  </div>
-                </div>
-                <div class="w-2/3">
-                  <h3 class="text-base md:text-lg font-bold leading-6">デザインプロジェクトセンター<br>後藤 哲也</h3>
-                  <div
-                    class="flex flex-wrap gap-2 text-center text-white text-[10px] lg:text-xs my-2 whitespace-nowrap">
-                    <p class="px-2 lg:px-3 py-0.5 bg-primary rounded-full">#ヴィジュアルコミュニケーション</p>
-                    <p class="px-2 lg:px-3 py-0.5 bg-primary rounded-full">#グラフィックデザイン</p>
-                  </div>
-                  <p class="md:pt-2 text-sm line-clamp-3 leading-relaxed">
-                    グラフィックデザインの研究と実践を行っています。研究では主にアジア地域のグラフィックデザインをリサーチしています。実践では主に文化生産にまつわるデザインと展覧会制作を行っています。
-                  </p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-          <div class="card w-full mx-auto p-4 sm:p-5 rounded-lg z-40">
-            <a href="researcher_detail_03.html">
-              <div class="flex gap-4">
-                <div class="w-1/3">
-                  <div class="w-full aspect-square rounded-lg overflow-hidden">
-                    <img class="w-full h-full object-cover" src="images/icon_3.jpg" alt="">
-                  </div>
-                </div>
-                <div class="w-2/3">
-                  <h3 class="text-base md:text-lg font-bold leading-6">DXデザインセンター<br>須藤 秀紹</h3>
-                  <div class="flex gap-2 text-center text-white text-[10px] md:text-xs my-2 flex-wrap">
-                    <p class="px-2 lg:px-3 py-0.5 bg-primary rounded-full">#システムデザイン</p>
-                    <p class="px-2 lg:px-3 py-0.5 bg-primary rounded-full">#チームワーク</p>
-                    <p class="px-2 lg:px-3 py-0.5 bg-primary rounded-full">#コミュニケーション</p>
-                  </div>
-                  <p class="md:pt-2 text-sm line-clamp-3 leading-relaxed">
-                    1991年徳島大学総合科学部卒業。同年（株）ジャストシステム入社、技術部（開発）に所属し、パソコン用ワードプロセッサーの開発に携わる。 2002年秋田公立美術工芸短期大学産業デザイン学科講師、
-                    2006年室蘭工業大学情報工学科助教授、2007年同准教授、2015年同しくみ情報系領域 准教授、2019年7月同しくみ解明系領域教授、2022年4月近畿大学情報学部教授、現在に至る。
-                    人の行為とシステムとの関連性、情報メディア、コミュニケーション、チームワークなどに関する研究に従事。
-                    計測自動制御学会、日本感性工学会、人工知能学会などの会員。2003年度計測自動制御学会論文賞、2016日本感性工学会論文賞など受賞。博士（情報学）</p>
-                </div>
-              </div>
-            </a>
-          </div>
-
-
-          <!-- <div class="card w-full mx-auto flex gap-4 p-4 sm:p-5 rounded-md z-40">
-            <div class="w-1/3">
-              <div class="w-full aspect-square rounded-lg overflow-hidden">
-                <img class="w-full h-full object-cover" src="images/icon_5.jpg" alt="">
-              </div>
+          <dl class="company-data reveal">
+            <div>
+              <dt>社名</dt>
+              <dd>サイバーエデュケーションテクノロジーズ株式会社</dd>
             </div>
-            <div class="w-2/3">
-              <h3 class="md:py-2 text-base md:text-xl font-bold leading-8">視覚デザインの国際的なネットワーク</h3>
-              <div class="tag text-[10px] md:text-xs">
-              <p class="bg-primary rounded-full">#キーワード</p>
-              <p class="bg-primary rounded-full">#キーワード</p>
-              <p class="bg-primary rounded-full">#キーワード</p>
-              </div>
-              <p class="md:pt-2 text-sm line-clamp-4 leading-relaxed">グラフィックデザインの研究と実践を行っています。研究では主にアジア地域のグラフィックデザインをリサーチしています。実践では主に文化生産にまつわるデザインと展覧会制作を行っています。</p>
+            <div>
+              <dt>設立</dt>
+              <dd>2021年11月22日</dd>
             </div>
-          </div> -->
+            <div>
+              <dt>代表者・役員</dt>
+              <dd>代表取締役　吉村 昌哲<br />取締役　矢崎 一臣<br />社外取締役　田尻 雄一</dd>
+            </div>
+            <div>
+              <dt>資本金</dt>
+              <dd>60,000,000円<br /><small>（資本準備金 40,000,000円）</small></dd>
+            </div>
+            <div>
+              <dt>事業内容</dt>
+              <dd>教育ICTプラットフォーム「CYBER CAMPUS」の提供<br /><small>※株式会社エヌ・ティ・エスと業務提携</small></dd>
+            </div>
+            <div>
+              <dt>所在地</dt>
+              <dd>〒105-0001<br />東京都港区虎ノ門3-22-1 虎ノ門桜ビル4F</dd>
+            </div>
+            <div>
+              <dt>電話番号</dt>
+              <dd><a href="tel:0357787138">03-5778-7138</a></dd>
+            </div>
+          </dl>
         </div>
-
-        <div
-          class="w-fit px-8 my-4 mx-auto rounded-md text-center text-base text-white bg-primary hover:opacity-90 hover:scale-105 cursor-pointer font-bold tracking-[.15em] leading-normal">
-          <a class="block py-3" href="researcher.html">もっと見る</a>
-        </div>
-
-
-        <div class="absolute w-[30%] -top-0 md:-top-[50%] -right-[15%]">
-          <img class="w-full" src="images/item2.svg" alt="">
-        </div>
-      </div><!-- project -->
+      </section>
     </main>
-    <footer class="bg-[#00507F] text-white">
-      <div
-        class="w-full lg:w-4/5 px-4 lg:px-0 py-8 mx-auto flex flex-col-reverse md:flex-row justify-between items-center">
-        <div>
-          <small class="block">&copy;KINDAI UNIVERSITY All Right Reserved.</small>
-        </div>
-        <div class="h-20 mt-0">
-          <img class="w-auto h-20" src="images/kindai_logo.png" alt="">
-        </div>
-      </div>
 
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <a class="footer-brand" href="#top"><img src="img/logo_w.svg" alt="CYBER EDUCATION TECHNOLOGIES" /></a>
+        <nav aria-label="フッターナビゲーション">
+          <a href="#about">CYBER CAMPUSとは</a>
+          <a href="#gakulog">学ログ</a>
+          <a href="#features">機能</a>
+          <a href="#ai">AI</a>
+          <a href="#plan">料金</a>
+          <a href="#company">会社概要</a>
+        </nav>
+      </div>
+      <div class="container footer-bottom">
+        <small>&copy; CYBER EDUCATION TECHNOLOGIES Inc. All Rights Reserved.</small>
+        <a href="#top">PAGE TOP ↑</a>
+      </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+    <script>
+      const menuButton = document.querySelector('.menu-button');
+      const nav = document.querySelector('.global-nav');
+
+      menuButton.addEventListener('click', () => {
+        const isOpen = menuButton.getAttribute('aria-expanded') === 'true';
+        menuButton.setAttribute('aria-expanded', String(!isOpen));
+        nav.classList.toggle('is-open', !isOpen);
+        document.body.classList.toggle('menu-open', !isOpen);
+      });
+
+      nav.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          menuButton.setAttribute('aria-expanded', 'false');
+          nav.classList.remove('is-open');
+          document.body.classList.remove('menu-open');
+        });
+      });
+
+      const header = document.querySelector('.site-header');
+      const updateHeader = () => header.classList.toggle('is-scrolled', window.scrollY > 20);
+      updateHeader();
+      window.addEventListener('scroll', updateHeader, { passive: true });
+
+      const revealElements = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add('is-visible');
+              observer.unobserve(entry.target);
+            }
+          });
+        }, { threshold: 0.12 });
+        revealElements.forEach((element) => revealObserver.observe(element));
+      } else {
+        revealElements.forEach((element) => element.classList.add('is-visible'));
+      }
+    </script>
   </body>
 
 </html>
-
-<script src="js/menu.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-<script src="js/anime.js"></script>
-<script src="js/cssanimation.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.js"></script>
-<script>
-  var swiperEl = document.querySelector(".mySwiper");
-  Object.assign(swiperEl, {
-    grabCursor: true,
-    breakpoints: {
-      768: { slidesPerView: 3.25, spaceBetween: 16 },
-      480: { slidesPerView: 1.25, spaceBetween: 8 },
-      320: { slidesPerView: 1 }
-    },
-    injectStyles: [`
-    .swiper-button-next.swiper-button-disabled, .swiper-button-prev.swiper-button-disabled {
-      opacity: 0;
-    }
-    .swiper-button-next, .swiper-button-prev {
-    background: rgba(0,87,129,.8);
-    width: 40px;
-    height: 40px;
-    border-radius: 9999px;
-    }
-
-    .swiper-button-next::after, .swiper-button-prev::after {
-      bottom: 0;
-      content: "";
-      height: 0;
-      margin: auto;
-      position: absolute;
-      top: 0;
-      width: 0;
-    }
-    .swiper-button-prev::after {
-    border-bottom: 10px solid transparent;
-    border-right: 12px solid #fff;
-    border-top: 10px solid transparent;
-    left: 11px;
-    }
-    .swiper-button-next::after {
-    border-bottom: 10px solid transparent;
-    border-left: 12px solid #fff;
-    border-top: 10px solid transparent;
-    right: 11px;
-    }
-    .swiper-button-next svg, .swiper-button-prev svg {
-    display: none;
-    scale: .8;
-
-    }
-    `],
-  });
-  swiperEl.initialize()
-</script>

@@ -1,66 +1,127 @@
-* {
-  box-sizing: border-box;
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  width: 100%;
-  background-color: #fff;
-  color: #0f172a;
-  line-height: 1.5;
-}
-
-.container {
-  position: relative;
-  top: -150px;
-  background-color: #fff;
-  border-radius: .5rem;
-  /* border-top-left-radius: 0.5rem; */
-  /* border-top-right-radius: 0.5rem; */
-  box-shadow: 0 0 15px rgba(100, 100, 100, .1);
-  width: 95%!important;
-  height: auto;
-  margin: 0 auto;
-  padding: 1.5rem 2rem;
-}
-
-.container.bgnone {
-  position: relative;
-  top: -150px;
-  border-radius: .5rem;
-  /* border-top-left-radius: 0.5rem; */
-  /* border-top-right-radius: 0.5rem; */
-  width: 95%!important;
-  height: auto;
-  margin: 0 auto;
-  padding: 1.5rem 2rem;
-  box-shadow: none;
+  font-family: "Noto Sans JP",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow-x: hidden !important;
 }
 
 p {
-  font-weight: light;
-  letter-spacing: 1px;
-}
-
-a.active {
-  color: #0369a1;
-}
-
-a.active::before {
-  content: "";
-  border-left: 4px solid #0369a1!important;
-  margin-right: 5px;
-}
-
-.tag {
-  display: inline-block;
-  width: fit-content;
-  margin-left: 8px;
-  padding: 1.5px 10px;
-  border-radius: 16px;
-  font-size: 8px;
-  color: #fff;
+  font-family: "Noto Sans JP",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* animetion */
+
+.fadeRight {
+  animation-name: fadeRightAnime;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes fadeRightAnime {
+  from {
+    opacity: 0;
+    transform: translateX(120px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* スクロールでフェードアウト */
+@supports (animation-timeline: view()) {
+  .fadeOut {
+    animation-name: fadeOutAnime;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: exit 0% exit 100%;
+    opacity: 1;
+  }
+
+  @keyframes fadeOutAnime {
+    from {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateX(120px);
+    }
+  }
+}
+
+.fadeBottom {
+animation-name:fadeBottomAnime;
+animation-duration:0.5s;
+animation-fill-mode:forwards;
+opacity:0;
+}
+
+@keyframes fadeBottomAnime{
+  from {
+    opacity: 0;
+  transform: translateY(40px);
+  }
+
+  to {
+    opacity: 1;
+  transform: translateY(0);
+  }
+}
+
+.fadeTop {
+  animation: fadeTopAnime linear;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  animation-timeline: view();
+  animation-range: entry 0% contain 15%;
+}
+
+@keyframes fadeTopAnime {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+/* テキストリンクホバー */
+.link a {
+  position: relative;
+  padding: 0 5px 5px;
+}
+
+/* .link a:hover {
+  color: #1d4ed8;
+} */
+
+.link a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0%;
+    width: 100%;
+    height: 2px;
+    background:oklch(28.2% 0.091 267.935);
+    transition: all .3s;
+    transform: scale(0, 1);
+    transform-origin: center top;
+    opacity: .75;
+  }
+
+.link a:hover::after {
+    transform: scale(1, 1);
+  }
