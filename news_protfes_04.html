@@ -89,6 +89,137 @@
           font-size: 13px;
         }
       }
+
+      .event-album {
+        margin-top: 32px;
+      }
+
+      .event-album+.event-album {
+        margin-top: 56px;
+      }
+
+      .event-album-title {
+        margin-bottom: 16px;
+        font-size: 16px;
+        font-weight: 700;
+      }
+
+      .event-photos {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 12px;
+      }
+
+      .event-photos--after {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .event-photo {
+        display: block;
+        overflow: hidden;
+        border-radius: 12px;
+        background: #f1f5f9;
+      }
+
+      .event-photo:first-child {
+        grid-column: 1 / -1;
+      }
+
+      .event-photo img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 3 / 2;
+        object-fit: cover;
+        transition: transform .25s ease;
+      }
+
+      .event-photo:first-child img {
+        aspect-ratio: auto;
+      }
+
+      .event-photo:hover img {
+        transform: scale(1.025);
+      }
+
+      .event-photo:focus-visible {
+        outline: 3px solid #007db5;
+        outline-offset: 4px;
+      }
+
+      .event-photo-hint {
+        margin: 12px 0 0;
+        color: #64748b;
+        font-size: 13px;
+      }
+
+      .event-video {
+        display: block;
+        width: 100%;
+        max-height: 70vh;
+        margin-top: 24px;
+        border-radius: 12px;
+        background: #0f172a;
+      }
+
+      .event-lightbox {
+        width: min(1100px, 94vw);
+        max-width: 94vw;
+        max-height: 94vh;
+        padding: 48px 12px 12px;
+        border: 0;
+        border-radius: 12px;
+        background: #fff;
+      }
+
+      .event-lightbox::backdrop {
+        background: rgb(15 23 42 / 85%);
+      }
+
+      .event-lightbox img {
+        display: block;
+        width: auto;
+        max-width: 100%;
+        height: auto;
+        max-height: 78vh;
+        margin: 0 auto;
+        border-radius: 12px;
+      }
+
+      .event-lightbox button {
+        position: absolute;
+        top: 10px;
+        right: 14px;
+        padding: 4px 12px;
+        border-radius: 6px;
+        color: #334155;
+        font-weight: 700;
+      }
+
+      .event-lightbox button:focus-visible {
+        outline: 2px solid #007db5;
+      }
+
+      @media (max-width: 640px) {
+        .event-photos {
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+        }
+
+        .event-photo {
+          border-radius: 8px;
+        }
+
+        .event-album+.event-album {
+          margin-top: 36px;
+        }
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .event-photo img {
+          transition: none;
+        }
+      }
     </style>
 
   </head>
@@ -131,9 +262,9 @@
       <div class="circle-bg"></div>
     </header>
     <main class="relative w-full">
-      <!-- <div class="fixed bottom-6 right-6 w-[15%] z-[9999]">
+      <div class="fixed bottom-6 right-6 w-[15%] z-[9999]">
         <img src="images/protofes_02/finish.png" alt="">
-      </div> -->
+      </div>
       <div class="w-full">
         <h1 class="hidden">第4回プロト・フェス　10/16（金）開催！</h1>
         <img src="images/protofes_04/protfes_banner_pre.jpg" alt="第4回プロトフェス メインビジュアル">
@@ -199,6 +330,77 @@
             </div>
           </div>
 
+        </div>
+      </div>
+      <div class="w-full lg:w-8/12 mx-auto pb-2 sm:pb-6 px-3 lg:px-0">
+        <div class="py-8 sm:pb-12">
+          <h4 class="pl-2 mb-6 text-base text-[#e41885] font-bold border-l-4 border-[#e41885]">
+            本年度の様子</h4>
+          <section class="event-album event-album--before" aria-labelledby="album-before">
+            <h5 id="album-before" class="event-album-title">開会～会場内の様子</h5>
+            <div class="event-photos">
+              <a class="event-photo" href="images/protofes_04/thisyear/before/1.jpg" aria-label="開会～会場内の様子の写真 1 を拡大">
+                <img src="images/protofes_04/thisyear/before/1.jpg" alt="第4回プロト・フェス 開会～会場内の様子（1）" width="4032"
+                  height="3024" loading="lazy" decoding="async">
+              </a>
+              <a class="event-photo" href="images/protofes_04/thisyear/before/2.jpg" aria-label="開会～会場内の様子の写真 2 を拡大">
+                <img src="images/protofes_04/thisyear/before/2.jpg" alt="第4回プロト・フェス 開会～会場内の様子（2）" width="3008"
+                  height="2000" loading="lazy" decoding="async">
+              </a>
+              <a class="event-photo" href="images/protofes_04/thisyear/before/3.jpg" aria-label="開会～会場内の様子の写真 3 を拡大">
+                <img src="images/protofes_04/thisyear/before/3.jpg" alt="第4回プロト・フェス 開会～会場内の様子（3）" width="3008"
+                  height="2000" loading="lazy" decoding="async">
+              </a>
+              <a class="event-photo" href="images/protofes_04/thisyear/before/4.jpg" aria-label="開会～会場内の様子の写真 4 を拡大">
+                <img src="images/protofes_04/thisyear/before/4.jpg" alt="第4回プロト・フェス 開会～会場内の様子（4）" width="4032"
+                  height="3024" loading="lazy" decoding="async">
+              </a>
+              <a class="event-photo" href="images/protofes_04/thisyear/before/5.jpg" aria-label="開会～会場内の様子の写真 5 を拡大">
+                <img src="images/protofes_04/thisyear/before/5.jpg" alt="第4回プロト・フェス 開会～会場内の様子（5）" width="3008"
+                  height="2000" loading="lazy" decoding="async">
+              </a>
+              <a class="event-photo" href="images/protofes_04/thisyear/before/6.jpg" aria-label="開会～会場内の様子の写真 6 を拡大">
+                <img src="images/protofes_04/thisyear/before/6.jpg" alt="第4回プロト・フェス 開会～会場内の様子（6）" width="3008"
+                  height="2000" loading="lazy" decoding="async">
+              </a>
+              <a class="event-photo" href="images/protofes_04/thisyear/before/7.jpg" aria-label="開会～会場内の様子の写真 7 を拡大">
+                <img src="images/protofes_04/thisyear/before/7.jpg" alt="第4回プロト・フェス 開会～会場内の様子（7）" width="3008"
+                  height="2000" loading="lazy" decoding="async">
+              </a>
+            </div>
+            <p class="event-photo-hint">写真をクリック・タップすると拡大できます。</p>
+            <video class="event-video" controls playsinline preload="metadata" aria-label="第4回プロト・フェス 開会～会場内の様子の動画">
+              <source src="images/protofes_04/thisyear/before/8.mov">
+              動画を再生できない場合は、<a href="images/protofes_04/thisyear/before/8.mov">こちらから動画を開いてください</a>。
+            </video>
+          </section>
+
+          <section class="event-album event-album--after" aria-labelledby="album-after">
+            <h5 id="album-after" class="event-album-title">表彰式～閉会</h5>
+            <div class="event-photos event-photos--after">
+              <a class="event-photo" href="images/protofes_04/thisyear/after/1.jpg" aria-label="表彰式～閉会の写真 1 を拡大">
+                <img src="images/protofes_04/thisyear/after/1.jpg" alt="第4回プロト・フェス 表彰式～閉会（1）" width="3008" height="2000"
+                  loading="lazy" decoding="async">
+              </a>
+              <a class="event-photo" href="images/protofes_04/thisyear/after/2.jpg" aria-label="表彰式～閉会の写真 2 を拡大">
+                <img src="images/protofes_04/thisyear/after/2.jpg" alt="第4回プロト・フェス 表彰式～閉会（2）" width="3008" height="2000"
+                  loading="lazy" decoding="async">
+              </a>
+              <a class="event-photo" href="images/protofes_04/thisyear/after/3.jpg" aria-label="表彰式～閉会の写真 3 を拡大">
+                <img src="images/protofes_04/thisyear/after/3.jpg" alt="第4回プロト・フェス 表彰式～閉会（3）" width="3008" height="2000"
+                  loading="lazy" decoding="async">
+              </a>
+              <a class="event-photo" href="images/protofes_04/thisyear/after/4.jpg" aria-label="表彰式～閉会の写真 4 を拡大">
+                <img src="images/protofes_04/thisyear/after/4.jpg" alt="第4回プロト・フェス 表彰式～閉会（4）" width="3008" height="2000"
+                  loading="lazy" decoding="async">
+              </a>
+              <a class="event-photo" href="images/protofes_04/thisyear/after/5.jpg" aria-label="表彰式～閉会の写真 5 を拡大">
+                <img src="images/protofes_04/thisyear/after/5.jpg" alt="第4回プロト・フェス 表彰式～閉会（5）" width="3008" height="2000"
+                  loading="lazy" decoding="async">
+              </a>
+            </div>
+            <p class="event-photo-hint">写真をクリック・タップすると拡大できます。</p>
+          </section>
         </div>
       </div>
 
@@ -286,7 +488,8 @@
                   それぞれのアワードには、プロトタイプの新たな魅力や可能性を発見してほしいという思いが込められています。</p>
               </div>
               <h5 class="mt-6 mb-4 text-base font-bold text-[#00A0E9]">アワード一覧</h5>
-              <img class="block w-full h-auto" src="images/protofes_04/award.png" width="1698" height="972" alt="8種類のアワード一覧：エール、スモールスマイル、バックストーリー、ヒラメキ、ハートキャッチ、ニューホープ、サステナブル、トレンド" loading="lazy">
+              <img class="block w-full h-auto" src="images/protofes_04/award.png" width="1698" height="972"
+                alt="8種類のアワード一覧：エール、スモールスマイル、バックストーリー、ヒラメキ、ハートキャッチ、ニューホープ、サステナブル、トレンド" loading="lazy">
               <div class="mt-6 text-base leading-loose">
                 <p>同じプロトタイプでも、見る視点によってさまざまな魅力が見えてきます。<br>
                   ぜひ会場で8つの視点を意識しながらプロトタイプをご覧いただき、「このアワードにぴったり！」と感じたプロトタイプに投票してみてください。<br>
@@ -305,7 +508,7 @@
               </div>
             </section>
 
-            <div class="pb-8">
+            <!-- <div class="pb-8">
               <h4 class="pl-2 mb-6 text-base text-[#e41885] font-bold border-l-4 border-[#e41885]">
                 昨年の様子</h4>
               <div class="grid grid-cols-1 grid-cols-3 gap-3 py-4">
@@ -326,96 +529,9 @@
                 </div>
 
               </div>
-            </div>
+            </div> -->
 
-            <!-- <div class="pb-8">
-              <table class="my-4 border-collapse w-full border border-slate-300 bg-white text-[15px] shadow">
-                <caption class="text-left pb-6">
-                  ◎ イベント当日のタイムスケジュール
-                </caption>
-                <thead>
-                  <tr class="bg-slate-50">
-                    <th class="border border-slate-300 p-4" colspan="2">日時</th>
-                    <th class="border border-slate-300 p-4" colspan="2">内容</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td class="border border-slate-300 p-4 text-center" rowspan="4">10/10（金）</td>
-                    <td class="border border-slate-300 p-4 text-center">12:30～13:00</td>
-                    <td class="border border-slate-300 p-4">開会セレモニー</td>
-                  </tr>
-                  <tr>
-                    <td class="border border-slate-300 p-4 text-center">13:00～16:00</td>
-                    <td class="border border-slate-300 p-4">出展者ピッチおよび会場展示、来場者によるアワード投票</td>
-                  </tr>
-                  <tr>
-                    <td class="border border-slate-300 p-4 text-center">16:00～17:00</td>
-                    <td class="border border-slate-300 p-4">アイデア・スプリント（NTTEDX）</td>
-                  </tr>
-                  <tr>
-                    <td class="border border-slate-300 p-4 text-center">17:30</td>
-                    <td class="border border-slate-300 p-4">閉会</td>
-                  </tr>
-
-                  <tr>
-                    <td class="border border-slate-300 p-4 text-center" rowspan="5">10/11（土）</td>
-                    <td class="border border-slate-300 p-4 text-center">11:00～11:30</td>
-                    <td class="border border-slate-300 p-4">開会セレモニー</td>
-                  </tr>
-                  <tr>
-                    <td class="border border-slate-300 p-4 text-center">11:30～13:30</td>
-                    <td class="border border-slate-300 p-4">会場展示、来場者によるアワード投票</td>
-                  </tr>
-                  <tr>
-                    <td class="border border-slate-300 p-4 text-center">13:30～15:30</td>
-                    <td class="border border-slate-300 p-4">アイデア・スプリント（未病マーカー、プラクス）</td>
-                  </tr>
-                  <tr>
-                    <td class="border border-slate-300 p-4 text-center">15:30～16:00</td>
-                    <td class="border border-slate-300 p-4">アワード表彰式</td>
-                  </tr>
-                  <tr>
-                    <td class="border border-slate-300 p-4 text-center">16:30</td>
-                    <td class="border border-slate-300 p-4">閉会</td>
-                  </tr>
-
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="pb-8 sm:pb-12">
-            <h4 class="pl-2 mb-6 text-base text-[#e10047] font-bold border-l-4 border-[#e10047]">
-              アワード（イノベーションにつながる多様な視点で評価するため、８つの視点で参加者に評価してもらうことで意見交換を促進しています）</h4>
-            <div class="grid grid-cols-1 min-[480px]:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 py-4">
-              <div class="w-full">
-                <img class="w-full h-auto" src="images/protofes_03/award/image_01.png" alt="">
-              </div>
-              <div class="w-full">
-                <img class="w-full h-auto" src="images/protofes_03/award/image_02.png" alt="">
-              </div>
-              <div class="w-full">
-                <img class="w-full h-auto" src="images/protofes_03/award/image_03.png" alt="">
-              </div>
-              <div class="w-full">
-                <img class="w-full h-auto" src="images/protofes_03/award/image_04.png" alt="">
-              </div>
-              <div class="w-full">
-                <img class="w-full h-auto" src="images/protofes_03/award/image_05.png" alt="">
-              </div>
-              <div class="w-full">
-                <img class="w-full h-auto" src="images/protofes_03/award/image_06.png" alt="">
-              </div>
-              <div class="w-full">
-                <img class="w-full h-auto" src="images/protofes_03/award/image_07.png" alt="">
-              </div>
-              <div class="w-full">
-                <img class="w-full h-auto" src="images/protofes_03/award/image_08.png" alt="">
-              </div>
-            </div>
-          </div>
-
+            <!--
           <div class="pb-8 sm:pb-12">
             <h4 class="pl-2 mb-6 text-base text-[#e10047] font-bold border-l-4 border-[#e10047]">アワードトロフィー<span
                 class="text-sm ml-4">※イメージ図ですので実際とは異なる可能性があります</span></h4>
@@ -448,38 +564,6 @@
           </div> -->
           </div>
 
-          <!-- <div class="pb-8 sm:pb-12">
-          <h4 class="pl-2 mb-6 text-base text-slate-700 font-bold border-l-4 border-slate-700">参加者募集</h4>
-          <p class="text-[15px] leading-loose">
-            参加費は無料、どなたでも予約なしでご来場いただけます！<br>
-            （受付時にお名前やご所属などをご記入いただきます）<br>
-            40〜50の出展ブースを様々な学生企画と一緒に巡っていただきたくさんのアイデアに実際に触れていただくことができます。<br>
-            また、アワード表彰を21日（土）に予定しており参加者の方にそれぞれのアイデアがどのアワードに相応しいか、投票していただきます。ぜひ「みんなで生み出す未知のアイデア」を体感してください！
-          </p>
-        </div> -->
-
-          <!-- <div class="py-4 sm:py-12 px-0 sm:px-4 md:px-8">
-          <img class="w-full mx-auto" src="images/protfes/comingsoon.png" alt="PROTFES Coming Soon">
-        </div> -->
-
-          <!-- <div class="pb-8 sm:pb-12">
-          <h4 class="pl-2 mb-6 text-base text-slate-700 font-bold border-l-4 border-slate-700">注意事項</h4>
-          <p class="text-[15px] leading-loose">
-            出展審査は、プロト・フェスの趣旨に適していることを重視し、近畿大学デザイン・クリエイティブ研究所で構成する審査会で行います。審査の結果、ご出展いただけない場合がございます。予めご了承ください。<br>
-            ※プロト・フェスにおける搬出入費用は各自・各社でご負担ください。<br>
-            １．申込みされ、審査に合格した製品を出品いただきます。<br>
-            ２．審査に関する内容については、一切お答えできません。予めご了承ください。<br>
-            ３．最終選考通過後でも、主催者が相応しくないと判断した場合、出展をお断りする場合があります。<br>
-            ４．会場の出展者のレイアウトならびに出展は主催者にご一任いただきます。出展ブースで本学にて準備できる備品は机１台、標準ポスターのみとなります。電源コンセントはブース床にあります。<br>
-            ５．主催者は、万一発生した天災、その他不可抗力の損害、盗難、紛失、損傷、会場内で発生した事故等についての損害負担、賠償の責を負いません。また、天災、悪天候、及び感染症・疫病の流行など不可抗力により｢プロト・フェス｣を中止する場合があります。その場合、主催者は出展者側に発生する経費の補償の責を負いません。<br>
-            ６．会期中のトラブル等について、主催者は一切の責任を負いません。<br>
-            ７．ガソリン・灯油・軽油類、アルコール燃料、ガス、炭火等の持ち込みはできません。また、他の出展者やお客様に迷惑をかける
-            音・悪臭を伴う場合はご出展をお断りします。<br>
-            ８．主催者、主催者が委託した業者が、会期中に会場内を撮影します。また報道機関による取材がある場合がございます。撮影画像
-            広報媒体や新聞等の記事、事業の報告書、次回以降の事業広報媒体等に掲載されることがありますので、予めご了承下さい。
-          </p>
-        </div> -->
-
         </div>
 
       </div>
@@ -497,6 +581,33 @@
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.2/dist/flowbite.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <dialog class="event-lightbox" aria-label="当日の写真を拡大表示">
+      <button type="button" autofocus>閉じる</button>
+      <img alt="">
+    </dialog>
+    <script>
+        (() => {
+          const dialog = document.querySelector('.event-lightbox');
+          if (!dialog || typeof dialog.showModal !== 'function') return;
+          const photo = dialog.querySelector('img');
+          document.querySelectorAll('.event-photo').forEach(link => {
+            link.addEventListener('click', event => {
+              event.preventDefault();
+              photo.src = link.href;
+              photo.alt = link.querySelector('img').alt;
+              dialog.showModal();
+            });
+          });
+          dialog.querySelector('button').addEventListener('click', () => dialog.close());
+          dialog.addEventListener('click', event => {
+            if (event.target === dialog) {
+              const bounds = dialog.getBoundingClientRect();
+              if (event.clientX < bounds.left || event.clientX > bounds.right ||
+                event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+            }
+          });
+        })();
+    </script>
   </body>
 
 </html>
