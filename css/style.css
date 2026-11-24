@@ -65,6 +65,11 @@ h2.title {
   }
 }
 
+/* Keep homepage section headings equally spaced from their content. */
+.home-content h2.title {
+  margin-bottom: 48px;
+}
+
 h3.sokuhou {
   font-family: "Mochiy Pop One", sans-serif;
   /* font-family: "WDXL Lubrifont JP N", sans-serif; */
